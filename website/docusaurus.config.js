@@ -29,8 +29,12 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: function ({ locale, docPath }) {
+            return `https://github.com/HXSecurity/DongTai-docs-docusaurus/edit/main/website/docs/${docPath}`;
+          },
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          includeCurrentVersion: true,
         },
         blog: {
           showReadingTime: true,
@@ -45,9 +49,21 @@ const config = {
     ],
   ],
 
+  i18n: 
+  {
+    defaultLocale: 'zh',
+    locales: ['zh', 'en'],
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      
+      algolia: {
+        apiKey: "f19c90b8ffe16ed118dae930cd070507",
+        indexName: "kubevela",        
+      },
+
       navbar: {
         title: 'My Facebook Project',
         logo: {
@@ -64,10 +80,18 @@ const config = {
           {to: 'blog', label: 'Blog', position: 'left'},
           // Please keep GitHub link to the right for consistency.
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'docsVersionDropdown',
             position: 'right',
+          },        
+          {
+            type: 'localeDropdown',
+            position: 'right',            
           },
+          {
+            href: 'https://github.com/HXSecurity/DongTai',
+            className: "header-github-link",            
+            position: 'right',
+          },        
         ],
       },
       footer: {
@@ -112,7 +136,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/HXSecurity/DongTai',
               },
             ],
           },
