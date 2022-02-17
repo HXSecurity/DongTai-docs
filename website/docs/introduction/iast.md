@@ -2,7 +2,6 @@
 sidebar_position: 1
 ---
 
-import Link from '@docusaurus/Link';
 import Highlight from '@site/src/components/Highlight';
 
 # IAST
@@ -19,7 +18,7 @@ IAST 相当于 DAST 和 SAST 的组合，是一种相互关联的运行时安全
 
 **IAST 能提供更高的测试准确性,并详细的标注漏洞在应用程序代码中的确切位置，来帮助开发人员达到实时修复。**
 
-![Comparison](/img/docs/introduction/zh_comparison.png)
+![Image](/img/docs/introduction/zh_comparison.png)
 
 :::info
 
@@ -37,7 +36,7 @@ IAST 安全检测工具分成 <Highlight color="#33A9AC">**被动式 IAST**</Hig
 
   需要在安全测试环境中使用 Agent 对应用程序进行监控。它将利用功能测试如：`输入`、`请求`、`数据库访问`等来收集的数据后进行漏洞分析，因此不需要主动运行专门的攻击测试。
 
-  ![Active IAST](/img/docs/introduction/zh_passive_iast.png)
+  ![Image](/img/docs/introduction/zh_passive_iast.png)
 
 * **主要优势：**
   
@@ -56,7 +55,8 @@ IAST 安全检测工具分成 <Highlight color="#33A9AC">**被动式 IAST**</Hig
 
   将 DAST 解决方案（Web 扫描器）和在应用程序服务器内部的 Agent 相结合, Agent 将根据 Web 扫描器提供的功能验证现有漏洞。
 
-  ![Active IAST](/img/docs/introduction/zh_active_iast.png)
+  ![Image](/img/docs/introduction/zh_active_iast.png)
 
 
-<Link to="https://blog.csdn.net/weixin_39997829/article/details/112981018#:~:text=%E6%8F%92%E6%A1%A9%E4%B8%BB%E5%8A%A8%E5%9E%8B-,%E6%89%AB%E6%8F%8F,-%E5%99%A8%3A">参考文献：【安全小哥】WEB应用自动化安全测试</Link>
+[参考文献：【安全小哥】WEB应用自动化安全测试](https://blog.csdn.net/weixin_39997829/article/details/112981018#:~:text=%E6%8F%92%E6%A1%A9%E4%B8%BB%E5%8A%A8%E5%9E%8B-,%E6%89%AB%E6%8F%8F,-%E5%99%A8%3A)
+

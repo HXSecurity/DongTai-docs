@@ -13,7 +13,7 @@ import Highlight from '@site/src/components/Highlight';
 
 ### 概览
 
-![Server_Arch](/img/docs/introduction/zh_server_arch.png "")
+![Image](/img/docs/introduction/zh_server_arch.png "")
 
 DongTai Server 架构的主要组成部分，提供了用户管理界面，使用 DongTai Agent 收集的数据去分析、识别漏洞并生成漏洞报告。同时，它也提供漏洞通知、Web-API、项目管理、自定义漏洞规则等功能。
 
@@ -68,7 +68,7 @@ DongTai Server 架构的主要组成部分，提供了用户管理界面，使�
 
 ### 漏洞分析原理
 
-![Detect_Theory](/img/docs/introduction/zh_detect_theory.png "")
+![Image](/img/docs/introduction/zh_detect_theory.png "")
 
 * 【不信任数据采集】：首先将采集到的数据放到一个数据池子中，定义为污点池。
 * 【不信任数据预处理】：接着从污点池里依定义的规则 hook 到函数的入参和出参。
@@ -77,7 +77,7 @@ DongTai Server 架构的主要组成部分，提供了用户管理界面，使�
 
 ### 漏洞分析方法
 
-![Detect_Method](/img/docs/introduction/detect_method.png "")
+![Image](/img/docs/introduction/detect_method.png "")
 
 
 ## DongTai Agent
@@ -96,7 +96,7 @@ DongTai Server 架构的主要组成部分，提供了用户管理界面，使�
 
 ### 流程
 
-![Agent_Arch](/img/docs/introduction/agent_arch.png)
+![Image](/img/docs/introduction/agent_arch.png)
 
 * 从 DongTai Server 注册 DongTai Agent
 * 按 Web 应用服务器开发语言下载和安装对应的 dongtai-core
@@ -106,7 +106,7 @@ DongTai Server 架构的主要组成部分，提供了用户管理界面，使�
 
 ### Java
 
-![Java_Agent_Arch](/img/docs/introduction/java_arch.png "")
+![Image](/img/docs/introduction/java_arch.png "")
 
 插桩（Instrument）是JVM提供的一个可以修改已加载类的类库，是专为 Java 语言编写的插桩服务。它可以构建一个独立于应用程序的 Agent，从而监测运行在 JVM 上的程序。
 
@@ -115,13 +115,13 @@ DongTai Server 架构的主要组成部分，提供了用户管理界面，使�
 
 ### Python
 
-![Python_Agent_Arch](/img/docs/introduction/python_arch.png "")
+![Image](/img/docs/introduction/python_arch.png "")
 
 与 Java 插桩类似，DongTai-Python-Agent 利用 Monkey Patch 在运行时动态修改类或模块，实现动态数据流污点采集及追踪。
 
 ### PHP
 
-![PHP_Agent_Arch](/img/docs/introduction/php_arch.png "")
+![Image](/img/docs/introduction/php_arch.png "")
 
 PHP 插桩原理主要是替换程序内部函数，将原始请求暂存在特定的位置，并触发 Agent 采集和追踪数据流污点。
 

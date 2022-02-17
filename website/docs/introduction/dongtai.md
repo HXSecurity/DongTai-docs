@@ -15,7 +15,7 @@ sidebar_position: 2
 
 ## 概览
 
-![Concept](/img/docs/introduction/zh_concept.png)
+![Image](/img/docs/introduction/zh_concept.png)
 
 * 在常规的操作中，Web 应用程序会收到来自用户的 HTTP 请求。
 
