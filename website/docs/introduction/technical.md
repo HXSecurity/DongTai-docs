@@ -53,6 +53,23 @@ sidebar_position: 4
 |<div style={{float : 'left', paddingRight : '100px'}}></div> ||
 |:------------|:---------------------------------------------------------------------------------------------------------------------|
 |Java/JVM     |Enterprise JavaBeans (EJB)、Grails、GWT、Hibernate、OWASP ESAPI、Play、Seam、Spring、SpringBoot、Struts、Vaadin、Velocity|
-|Java Runtime |AdoptOpen JDK、Amazon Corretto、Eclipse OpenJ9、IBM、Oracle HotSpot、Open JDK、Red Hat Open JDK|                                                                                                                            
+|Java Runtime |AdoptOpen JDK、Amazon Corretto、Eclipse OpenJ9、IBM、Oracle HotSpot、Open JDK、Red Hat Open JDK|
+
+
+### 第三方 Agent 适配性
+
+|<div style={{float : 'left', paddingRight : '100px'}}>Agent 名称</div> |<div style={{float : 'left', paddingRight : '500px'}}> Java Agent</div>   |
+|:------------|:---------------------------------------------------------------------------------------------------------|
+|JaCoCo |✓ |
+|Pinpoint |✓ |
+|SkyWalking |✓ |
+|Datadog |暂未适配，计划中 |
+|Elastic APM |暂未适配，计划中 |
+|Jvm-Sandbox |暂未适配，计划中 |
+|Jvm-Sandbox-repeater |暂未适配，计划中 |
+|Newrelic |暂未适配，计划中 |
+|Splunk |暂未适配，计划中 |
+|Takin |暂未适配，计划中 |
+
 
 
