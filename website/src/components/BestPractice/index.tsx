@@ -45,7 +45,7 @@ const Bestpractices = [
     url: 'hhttps://mp.weixin.qq.com/s/qyii_dLzUnZlfCIGZPOthA',
     description: (
       <Translate id="Bestpractice.wuxiong-02.description">
-        解构开源IAST 打造好大夫安全灰盒利器
+        解构开源 IAST 打造好大夫安全灰盒利器
       </Translate>
     ),
   },
