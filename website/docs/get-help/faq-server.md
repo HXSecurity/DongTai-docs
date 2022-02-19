@@ -1,5 +1,5 @@
 ---
-sidebar_position: 
+sidebar_position: 2
 ---
 
 # Server 相关
