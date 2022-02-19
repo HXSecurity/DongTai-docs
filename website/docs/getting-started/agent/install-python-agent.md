@@ -75,8 +75,13 @@ sidebar_position: 3
 
 :::info
 
+可通过配置文件 `config.js` 或环境变量配置自动创建项目、项目名称、项目版本号等。
+
+* `AUTO_CREATE_PROJECT=1` 为可选参数，将自动创建项目。 
 * `PROJECT_NAME=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
-* `-PROJECT_VERSION=<application version>` 为可选参数，会自动创建项目及版本。
+* `PROJECT_VERSION=<application version>` 为可选参数，会自动创建项目及版本。
+
+[🔗 : Python Agent 配置参数](./parameter/config-python-agent)
 
 如果不配置上述参数，也可进入项目管理中进行手工绑定。
 

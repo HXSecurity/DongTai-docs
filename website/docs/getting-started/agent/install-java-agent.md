@@ -411,6 +411,8 @@ values={[
 * `-Dproject.name=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
 * `-Dproject.version=<version>` 为可选参数，会自动创建项目及版本。
 
+[🔗 : Java Agent 配置参数](./parameter/config-java-agent)
+
 如果不配置上述参数，也可进入项目管理中进行手工绑定。
 
 
@@ -426,7 +428,7 @@ values={[
 
 * 该方案适用于批量测试，快速配置 Agent。
 
-[参考资源：27-second hack to install a Java agent](https://www.rookout.com/blog/27-second-hack-to-install-a-java-agent)
+[参考文献：27-second hack to install a Java agent](https://www.rookout.com/blog/27-second-hack-to-install-a-java-agent)
 
 :::
 
