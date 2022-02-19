@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## 安装环境
 
-* PHP 版本: 8.0.9 +
+* PHP 版本: 7.\*、8.0.9 +
 
 ## 安装 Agent
 
@@ -30,9 +30,9 @@ sidebar_position: 4
 
 4.  通过终端，可以调用本地 php 文件测试结果，也可以进入[靶场](https://github.com/jinghao1/phpvul)测试。
 
-:::tip
+	:::tip
 
-* 执行 `php –v`，正常显示 PHP 版本信息。
-* `php –m` 查看会有 dongtai\_php\_agent，即安装成功。
+	* 执行 `php –v`，正常显示 PHP 版本信息。
+	* `php –m` 查看会有 dongtai\_php\_agent，即安装成功。
 
-:::
+	:::

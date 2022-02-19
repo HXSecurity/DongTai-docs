@@ -241,15 +241,15 @@ values={[
 
 2. 进入 WebSphere WEB 端的管理后台，在控制台左侧的导航栏里，选择 **`Server > Server Types > WebSphere Application Server`**。
 
-    ![Image](/img/docs/getting-started/java-websphere-1.png "")
+    ![Image](/img/docs/getting-started/agent/java-websphere-1.png "")
 
 3. 选择需要安装 Agent 的应用程序服务器，点击进入管理页面。并在新页面下方找到 **`Server Infrastructure > Process definition`**。
 
-    ![Image](/img/docs/getting-started/java-websphere-2.png "")
+    ![Image](/img/docs/getting-started/agent/java-websphere-2.png "")
 
 3. 点击 **`Additional Properties > Java Virtual Machine`** 进入JVM启动参数编辑界面。
 
-    ![Image](/img/docs/getting-started/java-websphere-3.png "")
+    ![Image](/img/docs/getting-started/agent/java-websphere-3.png "")
 
 4. 找到 **`Generic JVM arguments`**, 添加以下配置并保存：
 
@@ -431,4 +431,8 @@ values={[
 [参考文献：27-second hack to install a Java agent](https://www.rookout.com/blog/27-second-hack-to-install-a-java-agent)
 
 :::
+
+## 安装演示
+
+<iframe width="820" height="400" src="https://fast.wistia.net/embed/iframe/sawwb8ensn" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

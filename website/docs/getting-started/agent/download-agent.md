@@ -8,4 +8,4 @@ sidebar_position: 1
 
 * 选择语言，开始下载 **`DongTai Agent`**。
 
-![Image](/img/docs/getting-started/zh_agent_install.png "")
+![Image](/img/docs/getting-started/agent/zh_agent_install.png "")

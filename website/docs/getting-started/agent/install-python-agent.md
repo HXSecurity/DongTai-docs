@@ -86,3 +86,7 @@ sidebar_position: 3
 如果不配置上述参数，也可进入项目管理中进行手工绑定。
 
 :::
+
+## 安装演示
+
+<iframe width="820" height="400" src="https://fast.wistia.net/embed/iframe/2yefyzou39" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
