@@ -18,7 +18,7 @@ sidebar_position: 5
 ### 做法 
 洞态 v1.1.3 版本增加了组件的路径，在检出组件数据的同时，也展示出组件所在的物理漏洞。
 
-[Image](/img/docs/tutorial/zh_sca_opt.png "")
+![Image](/img/docs/tutorial/zh_sca_opt.png "")
 
 
 [🔗 : 组件管理](../operation/component-management)
