@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import Link from '@docusaurus/Link';
@@ -72,6 +72,11 @@ cd deploy/docker-compose/
 ./dtctl rm -d
 # d : 改选项会让数据和服务一起被删除
 ```
+
+### 演示
+
+![Image](/img/docs/getting-started/server/deploy.gif)
+
 ## Kubernetes
 ### 系统需求
 
