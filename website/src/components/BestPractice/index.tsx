@@ -42,7 +42,7 @@ const Bestpractices = [
   },
   {
     name: '🏆 【伍雄】',
-    url: 'hhttps://mp.weixin.qq.com/s/qyii_dLzUnZlfCIGZPOthA',
+    url: 'https://mp.weixin.qq.com/s/qyii_dLzUnZlfCIGZPOthA',
     description: (
       <Translate id="Bestpractice.wuxiong-02.description">
         解构开源 IAST 打造好大夫安全灰盒利器
