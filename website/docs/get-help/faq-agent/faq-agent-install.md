@@ -10,7 +10,7 @@ import Highlight from '@site/src/components/Highlight';
 
 :::note 答复
 
-  * 当多个项目共用一个 Agent，所有的漏洞数据可以在 [应用漏洞](../operation/vul-management) 进行查看
+  * 当多个项目共用一个 Agent，所有的漏洞数据可以在 [应用漏洞](../../operation/vul-management) 进行查看
 
   * 如果需要区分不同的项目，可通过添加项目的启动参数 `-Dproject.name=<application name>`，然后新建项目。
 
@@ -22,7 +22,8 @@ import Highlight from '@site/src/components/Highlight';
 
 :::note 答复
 
-  [请参考配置 Agent 插件](../getting-started/agent/plugin/java-agent-idea#配置插件)
+  [请参考配置 Agent 插件](../../getting-started/agent/plugin/java-agent-idea#配置插件)
+
 
 :::
 
@@ -78,7 +79,7 @@ import Highlight from '@site/src/components/Highlight';
 
 :::note 答复
 
-  [请参考 Agent 排错指南](../getting-started/agent/agent-troubleshooting)
+  [请参考 Agent 排错指南](../../getting-started/agent/agent-troubleshooting)
 
 :::
 
@@ -91,7 +92,7 @@ import Highlight from '@site/src/components/Highlight';
 
  当应用更新新版本时，首先进入项目详情，在版本处可以编辑版本，新增版本并且切换到新版本，然后启动新版本应用即可
 
- [请参考项目配置](../operation/application-management#新建项目)
+ [请参考项目配置](../../operation/application-management#新建项目)
 
  * 不同版本的漏洞数据会展示在其对应版本的项目中
 
@@ -102,7 +103,7 @@ import Highlight from '@site/src/components/Highlight';
 
 :::note 答复
 
-  [请参考 Agent 安装环境 ](../getting-started/agent/install-java-agent#安装环境")
+  [请参考 Agent 安装环境 ](../../getting-started/agent/install-java-agent#安装环境")
 
 :::
 

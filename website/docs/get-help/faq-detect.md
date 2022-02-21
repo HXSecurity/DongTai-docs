@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 import Highlight from '@site/src/components/Highlight';
 
-# 漏洞检测问题
+# 漏洞检测相关
 
 ### 规则方法是否支持正则
 
