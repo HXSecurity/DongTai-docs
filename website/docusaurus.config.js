@@ -67,11 +67,22 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'introduction/dongtai',
             position: 'left',
-            label: '文档',
+            docId: 'introduction',
+            label: 'Docs',
           },
-          {to: 'blog', label: 'Blog', position: 'left'},
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'api',
+            label: 'API',
+          }, 
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'changelog',
+            label: '更新日志',
+          },                
           // Please keep GitHub link to the right for consistency.
           {
             type: 'docsVersionDropdown',
