@@ -15,18 +15,18 @@ sidebar_position: 1
 
 |<div style={{paddingRight : '130px'}}>关于洞态</div> |<div style={{paddingRight : '130px'}}>快速开始</div> | <div style={{paddingRight : '100px'}}>运维操作</div> | 
 |:------------|:-----------------|:-----------------|
-|[简介](introduction/dongtai)|[注册 SaaS](getting-started/deploy-server#dongtai-saas)|[版本升级](getting-started/deploy-server#升级)|
-|[架构](introduction/architecture)|[部署 Server](getting-started/deploy-server)|[系统配置]({operation/server-configuration )|
-|[功能](introduction/technical#功能)|[安装 Agent](getting-started/start-project#2-安装-dongtai-iast-agent)|[Agent 配置](agent/parameter/config-java-agent)|
+|[简介](introduction/dongtai)|[注册 SaaS](https://jinshuju.net/f/I9PNmf)|[版本升级](getting-started/deploy-server#升级)|
+|[架构](introduction/architecture)|[部署 Server](getting-started/deploy-server)|[系统配置](operation/server-configuration )|
+|[功能](introduction/technical#功能)|[安装 Agent](getting-started/start-project#2-安装-dongtai-iast-agent)|[Agent 配置](getting-started/agent/parameter/config-java-agent)|
 |[漏洞覆盖](introduction/detection)|[开始安全检测项目](getting-started/start-project#3-开启安全检测项目)|[项目配置](operation/application-management)
 |[更新日志](changelog/release-note)||[漏洞管理](operation/vul-management)|
 
 
 |<div style={{paddingRight : '130px'}}>最佳实践</div> |<div style={{paddingRight : '130px'}}>参考指南</div> | <div style={{paddingRight : '100px'}}>常见问题</div> | 
 |:------------|:-----------------|:-----------------|
-|[洞态落地实践](https://mp.weixin.qq.com/s/USw4pvYXN69UT6KauNqx0A)|API|[Server 部署]({get-help/faq-server)|
+|[洞态落地实践](https://mp.weixin.qq.com/s/USw4pvYXN69UT6KauNqx0A)|API|[Server 部署](get-help/faq-server)|
 |[容器部署 Agent](https://i0x0fy4ibf.feishu.cn/docs/doccnaKOEdFxTQnydHTuLBS5OIg)|[Agent 插件](getting-started/agent/plugin/java-agent-idea)|[Agent 安装](get-help/faq-agent/faq-agent-install)|
-|[请求管理](https://mp.weixin.qq.com/s/R5x1pZm5kobY9tGdC1KV7Q)|[Agent 性能测试](testing-report/java-agent-perfomance)|[漏洞检测](get-help/faq-agent/faq-agent-detect)|
+|[请求管理](https://mp.weixin.qq.com/s/R5x1pZm5kobY9tGdC1KV7Q)|[Agent 性能测试](testing-report/java-agent-perfomance)|[漏洞检测](get-help/faq-detect)|
 |[解构开源 IAST](https://mp.weixin.qq.com/s/qyii_dLzUnZlfCIGZPOthA)|[第三方 Agent 适配性](introduction/technical#第三方-agent-适配性)|[技术支持](https://github.com/HXSecurity/DongTai/discussions)|
 
 
