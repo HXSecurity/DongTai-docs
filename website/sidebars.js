@@ -106,7 +106,8 @@ const sidebars = {
           dirName: 'get-help',
         },        
       ],
-    },    
+    },
+    'resource-case',
   ],
   api: [
     {
