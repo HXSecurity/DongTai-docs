@@ -19,6 +19,54 @@
   overflow: hidden;
 }
 
+.flex_box{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.dt_search_box{
+  width: 30%;
+}
+
+
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+ .Cardbox {
+  background-color: var(--ifm-card-color);
+  border: 1px solid var(--ifm-navbar-search-input-background-color);
+  box-shadow: 0 3px 6px #2d354417, 8px 4px 4px rgb(11 33 74 / 3%);
+  margin: calc(var(--ifm-global-spacing)/2)!important;
+  max-width: calc(var(--ifm-col-width) - var(--ifm-global-spacing))!important;
+  padding: 1rem!important;
+  cursor: pointer;
+}
+
+.linkBox{
+  display: flex;
+  flex-wrap: wrap
+
+}
+
+.link{
+  font-size: 1rem;
+  color: var(--ifm-link-color) !important;
+  text-decoration: var(--ifm-link-decoration) !important;
+  transition: color var(--ifm-transition-fast) var(--ifm-transition-timing-default) !important;
+  padding-left: 30px;
+  width: 50%;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
@@ -39,6 +87,6 @@
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
 }
