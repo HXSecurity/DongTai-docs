@@ -24,7 +24,7 @@ sidebar_position: 1
 | `dongtai.response.length` | 向 Dongtai OpenAPI 发送的响应体长度     | Integer |大于 0 的整形数字        | null                  |
 | `dongtai.log`             | 是否把日志输出到本地文件               | Boolean  | `true` or `false`       | true                  |
 | `dongtai.log.path`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         | agent.jar 当前目录    |
-| `dongtai.log.level`       | 指定日志等级                             | String    |info, debug      | info                  |
+| `dongtai.log.level`       | 指定日志等级                             | String    |`info`, `debug`      | info                  |
 
 ## 热部署安装参数
 
@@ -36,7 +36,7 @@ sidebar_position: 1
 | `debug`          | 开启后加载本地系统临时目录中的检测引擎 | Boolean    |`true` or `false`       | false                 |
 | `dongtai_server` | Dongtai OpenAPI Url                    | String  | URL 格式      |                        |
 | `dongtai_token`  | Dongtai OpenAPI Token                  | String     |       |                      |
-| `mode`           | Agent 加载/卸载                        | String     | `install` \| `uninstall` | |
+| `mode`           | Agent 加载/卸载                        | String     | `install` or `uninstall` | |
 | `pid`            | 应用程序进程 ID                        | String     |                  |    |
 
 
