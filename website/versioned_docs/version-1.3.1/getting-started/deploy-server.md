@@ -24,6 +24,12 @@ import Highlight from '@site/src/components/Highlight';
 
 ### 部署
 
+:::caution 注意
+
+Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !**
+
+:::caution
+
 ```bash
 # 克隆存储库
 git clone https://github.com/HXSecurity/DongTai.git
@@ -33,7 +39,7 @@ cd deploy/docker-compose/
 ./dtctl install
 
 # 部署指定版本
-# 举例 1.2.0 版, <version> = 1.2.0
+# 举例 1.3.1 版, <version> = 1.3.1
 ./dtctl install -v <version>
 ```
 
