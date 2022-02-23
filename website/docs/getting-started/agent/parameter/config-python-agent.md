@@ -10,104 +10,20 @@ import TabItem from '@theme/TabItem';
 ## 配置文件 
 ### 参数表
 
-* <font color="FF0070"><strong> debug </strong></font>
+| 参数名  | 说明    | 类型  | 可选参数   |预设值    |
+| :--------|:--------|:--------| :--------| :--------|
+| `project.name`        | 设置项目名称 | String  |名称保证唯一   | Demo Project          |
+| `project.version`     | 设置项目版本       | String      |应用版本号    | V1.0.0                  |
+| `iast.server.token`    | 切换 Agent 所属用户                                 | String  |        | 洞态 IAST 用户 Token     |
+| `iast.server.url`      | 洞态 IAST 服务部署地址                  | String   | URL 格式      | |
+| `iast.server.interval`  | Agent 存活心跳，数据上报间隔时间                 | Integer   | 5 - 120 (秒)     | 10        |
+| `engine.name`        | 引擎名称 | String  |引擎名称   |        |
+| `engine.version`     | 引擎版本       | String      |引擎版本号   | v1.3.0                 |
+| `debug`           | 开启后会在日志记录 Agent 详细运转日志  | Boolean   |`true` or `false`       | false                 |
+| `log.log_path`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         |  ./dongtai_py_agent.log   |
 
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | Boolean |
-  |来源 | 配置文件 |
-  |可选参数 | `true` or `false`|
-  |默认值  | false |
-  |参数说明 | 开启后会在日志记录 Agent 详细运转日志 |
 
-* <font color="FF0070"><strong> iast.server.token </strong></font>
 
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | |
-  |默认值  | 洞态 IAST 用户 Token |
-  |参数说明 | 切换 Agent 所属用户 |
-
-* <font color="FF0070"><strong> iast.server.url </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | |
-  |默认值  | https://iast.huoxian.cn/openapi |
-  |参数说明 | 洞态 IAST 服务部署地址 |
-
-* <font color="FF0070"><strong> iast.server.interval </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 整型 |
-  |来源 | 配置文件 |
-  |可选参数 | 5 - 120 (秒) |
-  |默认值  | 10 |
-  |参数说明 | Agent 存活心跳，数据上报间隔时间 |
-
-* <font color="FF0070"><strong> project.name </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | 格式：中文、英文字母大小写、数字、\@等组合，长度20以内，名称保证唯一  |
-  |默认值  | Demo Project |
-  |参数说明 | 项目名称 |
-
-* <font color="FF0070"><strong> project.version </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | 自定义即可 |
-  |默认值  | v1.0 |
-  |参数说明 | 项目版本号 |
-
-* <font color="FF0070"><strong> engine.version </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | 自定义即可 |
-  |默认值  | v1.3.0 |
-  |参数说明 | 引擎版本号 |
-
-* <font color="FF0070"><strong> engine.name </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | 自定义即可 |
-  |默认值  | v1.3.0 |
-  |参数说明 | 引擎名称 |
-
-* <font color="FF0070"><strong> log.log_path </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置文件修改 |
-  |参数类型 | 字符串 |
-  |来源 | 配置文件 |
-  |可选参数 | 自定义即可 |
-  |默认值  | ./dongtai_py_agent.log |
-  |参数说明 | Agent 日志文件路径 |
   
 ### 用例
 
@@ -154,74 +70,25 @@ import TabItem from '@theme/TabItem';
 ```
 
 ## 环境变量配置
+
+:::info
+
+配置环境变量，优先级高于 Agent 配置文件
+
+:::
+
 ### 参数
 
-* <font color="FF0070"><strong> PROJECT_NAME </strong></font>
 
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置环境变量，优先级高于 Agent 配置文件 |
-  |参数类型 | 字符串 |
-  |来源 | 环境变量 |
-  |可选参数 | 格式：中文、英文字母大小写、数字、\@等组合，长度20以内，名称保证唯一  |
-  |默认值  | Demo Project |
-  |参数说明 | 项目名称 |
+| 参数名  | 说明    | 类型  | 可选参数   |预设值    |
+| :--------|:--------|:--------| :--------| :--------|
+| `PROJECT_NAME`        | 设置项目名称 | String  |名称保证唯一   | Demo Project          |
+| `PROJECT_VERSION `     | 设置项目版本       | String      |应用版本号    | V1.0.0                  |
+| `AUTO_CREATE_PROJECT`    | 自动创建项目       | String  | `1`：开启，`0`：关闭        | 0     |
+| `ENGINE_NAME`        | 引擎名称 | String  |引擎名称   |        |
+| `DEBUG`           | 开启后会在日志记录 Agent 详细运转日志  | Boolean   |`true` or `false`       | false                 |
+| `LOG_PATH`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         |  ./dongtai_py_agent.log   |
 
-* <font color="FF0070"><strong> PROJECT_VERSION </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置环境变量，优先级高于 Agent 配置文件 |
-  |参数类型 | 字符串 |
-  |来源 | 环境变量 |
-  |可选参数 | 自定义即可  |
-  |默认值  | v1.0.0 |
-  |参数说明 | 项目版本号 |
-
-* <font color="FF0070"><strong> ENGINE_NAME </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置环境变量，优先级高于 Agent 配置文件 |
-  |参数类型 | 字符串 |
-  |来源 | 环境变量 |
-  |可选参数 | 自定义即可  |
-  |默认值  |  |
-  |参数说明 | 引擎名称 |
-
-
-* <font color="FF0070"><strong> DEBUG </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置环境变量配置 DEBUG=1 |
-  |参数类型 | 整型 |
-  |来源 | 环境变量 |
-  |可选参数 | `1` or `0` |
-  |默认值  | 0 |
-  |参数说明 | 开启后会在日志记录 Agent 详细运转日志 |
-
-* <font color="FF0070"><strong> LOG_PATH </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置环境变量配置 DEBUG=1 |
-  |参数类型 | 整型 |
-  |来源 | 环境变量 |
-  |可选参数 | 自定义即可 |
-  |默认值  | ./dongtai_py_agent.log |
-  |参数说明 | Agent 日志文件路径 |
-
-* <font color="FF0070"><strong> AUTO_CREATE_PROJECT </strong></font>
-
-  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
-  |:----------|:---------------------------------|
-  |生效方式 | 配置环境变量配置 DEBUG=1 |
-  |参数类型 | 字符串 |
-  |来源 | 环境变量 |
-  |可选参数 | `1` or `0` |
-  |默认值  | 0 |
-  |参数说明 | 自动创建项目；`1`：开启，`0`：关闭 |
 
 ### 用例
 
