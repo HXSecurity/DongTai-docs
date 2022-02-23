@@ -12,10 +12,10 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '洞态文档',
-  tagline: 'The tagline of my site',
-  url: 'https://github.com/HXSecurity/DongTai-docs-docusaurus/edit/main/website/docs/${docPath}',
+  tagline: '了解洞态产品轻松上手的指南手册',
+  url: 'https://docs-v2.dongtai.io/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'HXSecurity', // Usually your GitHub org/user name.
@@ -43,33 +43,35 @@ const config = {
     ],
   ],
 
+
   i18n: 
   {
     defaultLocale: 'zh',
-    locales: ['zh', 'en'],
+    locales: ['zh'],
   },
+
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      
+    ({    
       algolia: {
-        apiKey: "f19c90b8ffe16ed118dae930cd070507",
-        indexName: "kubevela",        
-      },
-
+        appId: '3J96QAFH37',
+        apiKey: '498a632bcdf6a800fc90fc4d1233ff97',
+        indexName: 'test-doc-search',
+        contextualSearch: true,
+      },      
       navbar: {
-        title: '洞态文档',
+        title: '洞态',
         logo: {
-          alt: 'My Facebook Project Logo',
-          src: 'img/logo.svg',
+          alt: 'DongTai Logo',
+          src: 'img/dongtai-logo.svg',
         },
         items: [
           {
             type: 'doc',
             position: 'left',
             docId: 'introduction',
-            label: 'Docs',
+            label: '文档',
           },
           {
             type: 'docSidebar',
@@ -103,7 +105,6 @@ const config = {
         style: 'dark',  
         logo: {
           alt: 'Facebook Open Source Logo',
-          src: 'img/oss_logo.png',
           href: 'https://opensource.facebook.com',
         },
         // Please do not remove the credits, help to publicize Docusaurus :)
