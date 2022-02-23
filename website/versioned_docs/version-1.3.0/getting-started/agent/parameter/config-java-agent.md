@@ -7,7 +7,7 @@ sidebar_position: 1
 ## 参数表
 
 
-* <font color="FF0070"><strong> debug </strong></font>
+### ` debug `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -19,7 +19,7 @@ sidebar_position: 1
   |参数说明 | 开启后检测本地临时目录中是否存在核心检测引擎存在，加载本地检测引擎并启动 |
 
 
-* <font color="FF0070"><strong> project.name </strong></font>
+### ` project.name `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -31,7 +31,7 @@ sidebar_position: 1
   |参数说明 | 项目名称 |
 
 
-* <font color="FF0070"><strong> iast.mode </strong></font>
+### ` iast.mode `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -43,7 +43,7 @@ sidebar_position: 1
   |参数说明 | 漏洞检验模式，hunter 模式漏洞多、误报率高，normal 模式漏洞相对少、误报率低 |
 
 
-* <font color="FF0070"><strong> iast.server.mode </strong></font>
+### ` iast.server.mode `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -55,7 +55,7 @@ sidebar_position: 1
   |参数说明 | local 模式支持单漏洞验证、项目漏洞批量验证、POST 请求包展示、污点位置及污点值展示等功能 |
 
 
-* <font color="FF0070"><strong> iast.proxy.enable </strong></font>
+### ` iast.proxy.enable `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -67,7 +67,7 @@ sidebar_position: 1
   |参数说明 | HTTP代理模式是否启用 | 
 
 
-* <font color="FF0070"><strong> iast.proxy.host </strong></font>
+### ` iast.proxy.host `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -79,7 +79,7 @@ sidebar_position: 1
   |参数说明 | HTTP 代理的域名 (IP) |
 
 
-* <font color="FF0070"><strong> iast.proxy.port </strong></font>
+### ` iast.proxy.port `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:--------------------------------- |
@@ -91,7 +91,7 @@ sidebar_position: 1
   |参数说明 | HTTP 代理的端口 |
 
 
-* <font color="FF0070"><strong> iast.service.report.interval </strong></font>
+### ` iast.service.report.interval `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -103,7 +103,7 @@ sidebar_position: 1
   |参数说明 | 发送报告的间隔时间，单位：毫秒 |
 
 
-* <font color="FF0070"><strong> iast.service.relay.interval </strong></font>
+### ` iast.service.relay.interval `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -115,7 +115,7 @@ sidebar_position: 1
   |参数说明 | 发送报告的间隔时间，单位：毫秒 |
 
 
-* <font color="FF0070"><strong> iast.engine.delay.time </strong></font>
+### ` iast.engine.delay.time `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -127,7 +127,7 @@ sidebar_position: 1
   |参数说明 | 延迟启动功能，单位：秒 |
 
 
-* <font color="FF0070"><strong> iast.dump.class.enable </strong></font>
+### ` iast.dump.class.enable `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -139,7 +139,7 @@ sidebar_position: 1
   |参数说明 | 是否 dump 修改后的字节码 |
 
 
-* <font color="FF0070"><strong> iast.dump.class.path </strong></font>
+### ` iast.dump.class.path `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -151,7 +151,7 @@ sidebar_position: 1
   |参数说明 | dump 字节码的路径 |
 
 
-* <font color="FF0070"><strong> iast.server.url </strong></font>
+### ` iast.server.url `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -163,7 +163,7 @@ sidebar_position: 1
   |参数说明 | Server URL |
 
 
-* <font color="FF0070"><strong> iast.allhook.enable </strong></font>
+### ` iast.allhook.enable `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -175,7 +175,7 @@ sidebar_position: 1
   |参数说明 | 开启全量 Hook 模式 |
 
 
-* <font color="FF0070"><strong> project.create </strong></font>
+### ` project.create `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -187,7 +187,7 @@ sidebar_position: 1
   |参数说明 | 是否在管理服务器上自动创建项目 |
 
 
-* <font color="FF0070"><strong> project.version </strong></font>
+### ` project.version `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -199,7 +199,7 @@ sidebar_position: 1
   |参数说明 | 当配置该参数启动时，会自动创建项目及版本 |
 
 
-* <font color="FF0070"><strong> response.length </strong></font>
+### ` response.length `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
   |:----------|:---------------------------------|
@@ -209,6 +209,39 @@ sidebar_position: 1
   |可选参数 | 大于 0 的整形数字 |
   |默认值  | 无 |
   |参数说明 | 当配置该参数启动时，会改变 agent 获取应用的 http 请求响应体的长度 |
+
+### ` dongtai.log `
+
+  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
+  |:----------|:---------------------------------|
+  |生效方式 | 启动时添加 `-Ddongtai.log=<true or false>` |
+  |参数类型 | Boolean |
+  |来源 | 配置文件 |
+  |可选参数 | `true` or `false`  |
+  |默认值  | true |
+  |参数说明 | 是否把日志输出到本地文件 |  
+
+### ` dongtai.log.path `
+
+  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
+  |:----------|:---------------------------------|
+  |生效方式 | 启动时添加 `-Ddongtai.log.path=/tmp` |
+  |参数类型 | 字符串 |
+  |来源 | 配置文件 |
+  |可选参数 | 任意有读写权限的目录|
+  |默认值  | agent.jar 当前目录  |
+  |参数说明 | 指定日志文件所在目录 | 
+
+### ` dongtai.log.level `
+
+  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
+  |:----------|:---------------------------------|
+  |生效方式 | 启动时添加 `-Ddongtai.log.level=<1000>` |
+  |参数类型 | 字符串 |
+  |来源 | 配置文件 |  
+  |可选参数 | `info`, `debug` |
+  |默认值  | info |
+  |参数说明 | 指定日志等级 | 
 
 
 ## 用例

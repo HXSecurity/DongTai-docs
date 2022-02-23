@@ -95,7 +95,7 @@ import TabItem from '@theme/TabItem';
   |参数类型 | 字符串 |
   |来源 | 配置文件 |
   |可选参数 | 自定义即可 |
-  |默认值  | v1.3.0 |
+  |默认值  |   |
   |参数说明 | 引擎名称 |
 
 * <font color="FF0070"><strong> log.log_path </strong></font>
