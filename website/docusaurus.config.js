@@ -13,7 +13,7 @@
 const config = {
   title: '洞态文档',
   tagline: '了解洞态产品轻松上手的指南手册',
-  url: 'https://docs-v2.dongtai.io/',
+  url: 'https://docs.dongtai.io/',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
@@ -57,7 +57,7 @@ const config = {
       algolia: {
         appId: '3J96QAFH37',
         apiKey: '498a632bcdf6a800fc90fc4d1233ff97',
-        indexName: 'test-doc-search',
+        indexName: 'dongtai-search',
         contextualSearch: true,
       },      
       navbar: {
