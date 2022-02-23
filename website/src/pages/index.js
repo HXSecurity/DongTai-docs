@@ -18,35 +18,32 @@ import SearchBar from '../theme/SearchBar';
 
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    url:'docs/introduction',
+    title: '快速开始',
+    imageUrl: 'img/index/getting-started.svg',
+    url:'docs/category/快速开始',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+      快速部署洞态，开始您的互动式安全检测项目
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
-    url:'docs/introduction',
+    title: '操作手册',
+    imageUrl: 'img/index/operation.svg',
+    url:'docs/category/实践教学',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+      介绍洞态常见应用场景的操作实践
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    url:'docs/introduction',
+    title: '最佳实践',
+    imageUrl: 'img/index/star.svg',
+    url:'docs/best-practice-case',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+      洞态在 DevSecOps 中的最佳实践
       </>
     ),
   },
@@ -55,40 +52,37 @@ const features = [
 
 const features2 = [
   {
-    title: 'Easy to Use',
+    title: '常见问题',
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     url:'docs/introduction',
     links:[
-      {label:"链接1",url:"docs/introduction"},
-      {label:"链接1",url:"docs/introduction"},
-      {label:"链接1",url:"docs/introduction"},
-      {label:"链接1",url:"docs/introduction"},
-      {label:"链接1",url:"docs/introduction"},
-      {label:"链接1",url:"docs/introduction"},
+      {label:"📙 洞态 IAST 和 百度 OpenRASP-IAST 的区别",url:"docs/get-help/faq-dongtai#洞态-iast-和-百度-openrasp-iast-的区别"},
+      {label:"📙 洞态 IAST 漏洞覆盖",url:"docs/introduction/detection"},
+      {label:"📙 部署洞态 Server 相关问题",url:"docs/get-help/faq-server"},
+      {label:"📙 安装洞态 Agent 相关问题",url:"docs/get-help/faq-agent/faq-agent-install"},
+      {label:"📙 洞态漏洞检测相关问题",url:"docs/get-help/faq-detect"},
+      {label:"📙 联系我们",url:"docs/get-help/contact-us"},
     ],
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
       </>
     ),
   },
   
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
-    url:'docs/introduction',
+    title: '更新发布',
+    imageUrl: 'img/index/news.svg',
+    url:'docs/changelog/release-note',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        取得新功能、更新和错误修复信息
       </>
     ),
   },
 ];
 
 
-function Feature({imageUrl, title, description,url}) {
+function Feature({imageUrl, title, description,url,links}) {
   const imgUrl = useBaseUrl(imageUrl);
   const href = useBaseUrl(url)
   return (
