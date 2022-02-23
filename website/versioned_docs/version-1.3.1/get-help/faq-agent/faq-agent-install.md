@@ -12,9 +12,12 @@ import Highlight from '@site/src/components/Highlight';
 
   * 当多个项目共用一个 Agent，所有的漏洞数据可以在 [应用漏洞](../../operation/vul-management) 进行查看
 
-  * 如果需要区分不同的项目，可通过添加项目的启动参数 `-Dproject.name=<application name>`，然后新建项目。
+  * 如果需要区分不同的项目，可通过添加项目的启动参数 `-Ddongtai.app.name=<application name>`，然后新建项目。
 
-  *项目名与参数 `-Dproject.name=<applicatin name>` 中的 `application name` 一致即可*
+  *项目名与参数 `-Ddongtai.app.name=<applicatin name>` 中的 `application name` 一致即可*
+
+  [请参考 Java Agent 参数配置](../../getting-started/agent/parameter/config-java-agent)、[Python Agent 参数配置](../../getting-started/agent/parameter/config-python-agent)
+
 
 :::
 

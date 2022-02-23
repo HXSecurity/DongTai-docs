@@ -407,9 +407,9 @@ values={[
 
 :::info
 
-* `-Dproject.create=true` 为可选参数，将自动创建项目。
-* `-Dproject.name=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
-* `-Dproject.version=<version>` 为可选参数，会自动创建项目及版本。
+* `-Ddongtai.app.create=true` 为可选参数，将自动创建项目。
+* `-Ddongtai.app.name=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
+* `-Ddongtai.app.version=<version>` 为可选参数，会自动创建项目及版本。
 
 [🔗 : Java Agent 配置参数](./parameter/config-java-agent)
 
@@ -422,9 +422,9 @@ values={[
 
 :::info
 
-* 配置环境变量：`JAVA\_TOOL\_OPTIONS=-javaagent:agent.jar`
+* 配置环境变量：`JAVA_TOOL_OPTIONS=-javaagent:agent.jar`
 
-* Linux 命令：`export JAVA\_TOOL\_OPTIONS=-javaagent:agent.jar`
+* Linux 命令：`export JAVA_TOOL_OPTIONS=-javaagent:agent.jar`
 
 * 该方案适用于批量测试，快速配置 Agent。
 
