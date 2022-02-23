@@ -88,27 +88,27 @@ sidebar_position: 8
 
 * **字段解释**：
 
-|参数名|说明|
-|:|:|
-|vul_list |漏洞列表 |
-|vul |漏洞详细数据 |
-|vul.id |漏洞id |
-|vul.summary |漏洞标题 |
-|vul.details |漏洞描述 |
-|vul.aliases |漏洞其他编号 |
-|vul.published |漏洞发布时间 |
-|vul.references |漏洞参考资料 |
-|vul.references.url |参考资料 URL |
-|vul.references.type |参考资料类型 |  
-|vul_package.cwe_ids |CWE 列表 |
-|vul_package.cvss_score |CVSS Sscore |
-|vul_package.severity: 漏洞级别 |Critical,High,Medium,Low,None |   
-|fixed_versions |该漏洞修复版本 |
-|package |包信息 |
-|package.aql |包 AQL值
-|package.hash |包的 SHA-1 值 |
-|package.ecosystem |包来源，Java 组件包为 Maven |
-|package.name |包名 |
-|package.version |包版本 |
-|package.license |包的授权信息 |
+	|参数名|说明|
+	|:|:|
+	|vul_list |漏洞列表 |
+	|vul |漏洞详细数据 |
+	|vul.id |漏洞id |
+	|vul.summary |漏洞标题 |
+	|vul.details |漏洞描述 |
+	|vul.aliases |漏洞其他编号 |
+	|vul.published |漏洞发布时间 |
+	|vul.references |漏洞参考资料 |
+	|vul.references.url |参考资料 URL |
+	|vul.references.type |参考资料类型 |  
+	|vul_package.cwe_ids |CWE 列表 |
+	|vul_package.cvss_score |CVSS Sscore |
+	|vul_package.severity: 漏洞级别 |Critical, High, Medium, Low, None |   
+	|fixed_versions |该漏洞修复版本 |
+	|package |包信息 |
+	|package.aql |包 AQL值
+	|package.hash |包的 SHA-1 值 |
+	|package.ecosystem |包来源，Java 组件包为 Maven |
+	|package.name |包名 |
+	|package.version |包版本 |
+	|package.license |包的授权信息 |
 

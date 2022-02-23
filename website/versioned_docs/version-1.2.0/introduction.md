@@ -24,7 +24,7 @@ sidebar_position: 1
 
 |<div style={{paddingRight : '130px'}}>最佳实践</div> |<div style={{paddingRight : '130px'}}>参考指南</div> | <div style={{paddingRight : '100px'}}>常见问题</div> | 
 |:------------|:-----------------|:-----------------|
-|[洞态落地实践](https://mp.weixin.qq.com/s/USw4pvYXN69UT6KauNqx0A)|API|[Server 部署](get-help/faq-server)|
+|[洞态落地实践](https://mp.weixin.qq.com/s/USw4pvYXN69UT6KauNqx0A)|[API](api/openapi/openapi-agent-develop)|[Server 部署](get-help/faq-server)|
 |[容器部署 Agent](https://i0x0fy4ibf.feishu.cn/docs/doccnaKOEdFxTQnydHTuLBS5OIg)|[Agent 插件](getting-started/agent/plugin/java-agent-idea)|[Agent 安装](get-help/faq-agent/faq-agent-install)|
 |[请求管理](https://mp.weixin.qq.com/s/R5x1pZm5kobY9tGdC1KV7Q)|[Agent 性能测试](testing-report/java-agent-perfomance)|[漏洞检测](get-help/faq-detect)|
 |[解构开源 IAST](https://mp.weixin.qq.com/s/qyii_dLzUnZlfCIGZPOthA)|[第三方 Agent 适配性](introduction/technical#第三方-agent-适配性)|[技术支持](https://github.com/HXSecurity/DongTai/discussions)|
