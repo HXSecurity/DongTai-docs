@@ -6,6 +6,14 @@ import Highlight from '@site/src/components/Highlight';
 
 # 安装问题
 
+### 安装 Agent 所需的时间过长是否正常
+
+:::note 答复
+
+  不正常，正常不会超过一分钟
+
+:::
+
 ### 多个项目共用一个 Agent，后台会怎么展示收集到的漏洞信息
 
 :::note 答复
@@ -134,3 +142,15 @@ import Highlight from '@site/src/components/Highlight';
   [请参考最佳实践：容器部署洞态 Java Agent 实践](https://i0x0fy4ibf.feishu.cn/docs/doccnaKOEdFxTQnydHTuLBS5OIg)
 
 :::
+
+### 更新洞态 Server 后是否每次都需要重新下载和安装 Agent
+
+:::note 答复
+
+  不是，1.3.1 版本之前的 Agent 因 **包名变更** 无法使用 1.3.1 版本以后的 Server 端。
+
+  **仅升级至 1.3.1 版本的洞态 Server 后需重新下载及安装 Agent！**
+
+  [请参考 Agent 下载及安装 ](../../getting-started/start-project#2-安装-dongtai-iast-agent)
+
+::: 

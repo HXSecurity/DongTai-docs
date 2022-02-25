@@ -6,6 +6,15 @@ import Highlight from '@site/src/components/Highlight';
 
 # 漏洞检测相关
 
+### 是否有完整的能检测漏洞类型文档
+
+:::note 答复
+
+  [请参考搜寻功能](../introduction/detection)
+
+:::
+
+
 ### 规则方法是否支持正则
 
 :::note 答复
@@ -105,4 +114,11 @@ import Highlight from '@site/src/components/Highlight';
 
 :::
 
+### 洞态是否支持 log4j 的检测
+
+:::note 答复
+
+  1.3.0 及以上版本支持此功能，不需要插件，直接就能检测
+
+:::
 

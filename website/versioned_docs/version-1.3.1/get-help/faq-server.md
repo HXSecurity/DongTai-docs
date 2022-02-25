@@ -59,3 +59,49 @@ sidebar_position: 2
 
   * 仍不行就给需要映射文件的容器加上 ``--``
 :::
+
+### 1.1.3 版本首次登录显示失败
+
+:::note 答复
+
+  1.1.3 版本的话重启洞态会有此 bug，建议升级到最新版
+
+:::
+
+
+### 如何解决洞态 Server 服务配置域名后，无法访问的问题
+
+:::note 答复
+
+  [请参考部署指南：自定义配置域名访问](../getting-started/deploy-server#部署) 中的配置设定
+
+:::
+
+### 洞态 Server 的升级方案
+
+:::note 答复
+
+  [请参考部署指南：升级](../getting-started/deploy-server#升级)
+
+:::
+
+### 如何查询洞态 Server 数据库增量脚本的下载地址
+
+:::note 答复
+
+  [请参考部署指南：初始化自定义数据库](../getting-started/deploy-server#初始化自定义数据库)
+
+:::
+
+### 业务方在哪里配置特定的 URL 或 Header
+
+:::note 答复
+
+  配置 `blackurl.txt` 文件
+
+  需要更改源码中的配置文件 `src/main/resources/com.secnium.iast.resources/blackurl.txt`，重新编译 Agent
+
+  修改 `blackurl.txt` 后编译打包，将生成的release文件夹里的所有包替换掉 `DongTai-openapi` 容器里 `/tmp/iast_cache/package` 下的所有 jar 包
+
+:::
+
