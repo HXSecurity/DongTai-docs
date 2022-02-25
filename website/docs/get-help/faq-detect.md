@@ -10,7 +10,7 @@ import Highlight from '@site/src/components/Highlight';
 
 :::note 答复
 
-  [请参考搜寻功能](../introduction/detection)
+  [请参考漏洞覆盖](../introduction/detection)
 
 :::
 
