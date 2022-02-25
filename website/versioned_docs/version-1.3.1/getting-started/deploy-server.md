@@ -30,22 +30,37 @@ Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !*
 
 :::caution
 
-```bash
-# 克隆存储库
-git clone https://github.com/HXSecurity/DongTai.git
-cd deploy/docker-compose/
 
-# 部署最新版本
-./dtctl install
+* 克隆存储库
 
-# 部署指定版本
-# 举例 1.3.1 版, <version> = 1.3.1
-./dtctl install -v <version>
-```
+	```bash
+	git clone https://github.com/HXSecurity/DongTai.git
+	```
 
-:::note
+* 更新代码
 
-💡 自定义配置
+	```bash
+	git pull
+	```
+
+* 切换至目录
+
+	```bash	
+ 	cd DongTai/deploy/docker-compose/
+	```
+
+* 部署最新版本
+	
+	```bash	
+	./dtctl install
+	```
+	```bash
+	# 部署指定版本
+	# 举例 1.3.1 版, <version> = 1.3.1
+	./dtctl install -v <version>
+	```
+
+:::note 自定义配置数据库
 
 
 使用自定义数据库，请手动修改 `config-tutorial.ini` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](#初始化自定义数据库)。
@@ -60,24 +75,47 @@ cd deploy/docker-compose/
 
 :::
 
+:::note 自定义配置域名访问
+
+需要使用 HTTPS 域名访问的用户， 可通过修改 `config-tutorial.ini` 文件，增加如下配置，实现 CSRF 信任域名的配置，如：`https://xxx.example.com`，配置如下：
+
+```bash
+[security]
+csrf_trust_origins = .example.com
+```
+
+* 若有多个 HTTPS 域名进行绑定，域名间通过 "," 连接，如：`.example.com`, `.iast.io`, `.dongtai.io`
+
+:::
+
 ### 升级
 
 升级配置，可直接升级至最新版本或是指定版本。
-```bash
-# 升级至最新版本
-./dtctl upgrade
-```
-```bash
-# 升级至指定版本，t: to version
-./dtctl upgrade -t <version>
-```
+
+* 更新代码
+
+	```bash
+	git pull
+	```
+* 执行更新
+
+	```bash
+	# 更新成最新发布版本
+	./dtctl upgrade
+	```
+	```bash
+	# 升级至指定版本，t: to version
+	./dtctl upgrade -t <version>
+	```
+
 ### 卸载
 
-卸载配置
-```bash
-./dtctl rm -d
-# d : 改选项会让数据和服务一起被删除
-```
+* 卸载配置
+
+	```bash
+	./dtctl rm -d
+	# d : 改选项会让数据和服务一起被删除
+	```
 
 ### 演示
 
