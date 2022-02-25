@@ -35,6 +35,14 @@ sidebar_position: 1
 
 :::
 
+:::caution 注意
+
+包名变更，1.3.1 版本之前的 Agent 无法使用 1.3.1 版本以后的 Server 端。
+
+**升级 Server 后需重新下载及安装 Agent！**
+
+::: 
+
 ### 步骤 2: 安装 Agent
 
 :::note Agent 安装指南
