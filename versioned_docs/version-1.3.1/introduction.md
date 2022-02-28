@@ -15,9 +15,9 @@ sidebar_position: 1
 
 |<div style={{paddingRight : '130px'}}>关于洞态</div> |<div style={{paddingRight : '130px'}}>快速开始</div> | <div style={{paddingRight : '100px'}}>运维操作</div> | 
 |:------------|:-----------------|:-----------------|
-|[简介](introduction/dongtai)|[注册 SaaS](https://jinshuju.net/f/I9PNmf)|[版本升级](getting-started/deploy-server#升级)|
-|[架构](introduction/architecture)|[部署 Server](getting-started/deploy-server)|[系统配置](operation/server-configuration )|
-|[功能](introduction/technical#功能)|[安装 Agent](getting-started/start-project#2-安装-dongtai-iast-agent)|[Agent 配置](getting-started/agent/parameter/config-java-agent)|
+|[简介](introduction/dongtai)|[注册 SaaS](https://jinshuju.net/f/I9PNmf)|[版本升级](getting-started/server/deploy-docker-compose#升级)|
+|[架构](introduction/architecture)|[部署 Server](category/server-部署指南)|[系统配置](operation/server-configuration )|
+|[功能](introduction/technical#功能)|[安装 Agent](category/agent-安装指南)|[Agent 配置](getting-started/agent/parameter/config-java-agent)|
 |[漏洞覆盖](introduction/detection)|[开始安全检测项目](getting-started/start-project#3-开启安全检测项目)|[项目配置](operation/application-management)
 |[更新日志](changelog/release-note)||[漏洞管理](operation/vul-management)|
 

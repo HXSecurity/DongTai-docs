@@ -8,7 +8,7 @@ sidebar_position: 2
 
 :::note 答复
 
-支持，[请参考部署指南](../getting-started/deploy-server)
+支持，[请参考部署指南](../getting-started/server/deploy-docker-compose)
 
 :::
 
@@ -16,7 +16,7 @@ sidebar_position: 2
 
 :::note 答复
 
-  [请参考初始化自定义数据库](../getting-started/deploy-server#初始化自定义数据库")
+  [请参考初始化自定义数据库](../getting-started/server/initial-sql-config)
 
 :::
 
@@ -34,7 +34,7 @@ sidebar_position: 2
 
 :::note 答复
 
-  建议至少 4 Core 8 GB, [请参考部署指南](../getting-started/deploy-server) 中各部署方式之系统需求
+  建议至少 4 Core 8 GB, [请参考部署指南](../category/server-部署指南) 中各部署方式之系统需求
 
 :::
 
@@ -73,7 +73,7 @@ sidebar_position: 2
 
 :::note 答复
 
-  [请参考部署指南：自定义配置域名访问](../getting-started/deploy-server#部署) 中的配置设定
+  [请参考部署指南：自定义配置域名访问](../getting-started/server/deploy-docker-compose#部署) 中的配置设定
 
 :::
 
@@ -81,7 +81,7 @@ sidebar_position: 2
 
 :::note 答复
 
-  [请参考部署指南：升级](../getting-started/deploy-server#升级)
+  [请参考部署指南：升级](../getting-started/server/deploy-docker-compose#升级)
 
 :::
 
@@ -89,7 +89,7 @@ sidebar_position: 2
 
 :::note 答复
 
-  [请参考部署指南：初始化自定义数据库](../getting-started/deploy-server#初始化自定义数据库)
+  [请参考部署指南：初始化自定义数据库](../getting-started/server/initial-sql-config)
 
 :::
 
