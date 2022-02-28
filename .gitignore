@@ -1,6 +1,9 @@
 # Dependencies
 /node_modules
 
+# Dependencies
+/website/node_modules
+
 # Production
 /build
 
