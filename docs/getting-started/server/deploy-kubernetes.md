@@ -14,19 +14,23 @@ import Highlight from '@site/src/components/Highlight';
 
 * 具备以下操作的授权,可以使用 `kubectl auth can-i` 验证:
 
-	* create secrets
+    * create secrets
 
-	* create deployments
+    * create deployments
 
-	* create configmaps
+    * create configmaps
 
-	* create namespaces
+    * create namespaces
 
-	* create StatefulSet
+    * create StatefulSet
 
-	* create Service
+    * create Service
+
+
 
 ## 脚本部署
+
+> 「脚本部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
 
 * 部署
 
@@ -94,6 +98,7 @@ kubectl delete namespace ${YourNamespace}
 
 
 ## Helm 部署
+> 「Helm 部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
 
 :::tip
 
