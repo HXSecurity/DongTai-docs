@@ -18,7 +18,7 @@ const config = {
   tagline: '了解洞态产品轻松上手的指南手册',
   url: 'https://docs.dongtai.io/',
   baseUrl: '/',
-  onBrokenLinks: 'ignore',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'HXSecurity', // Usually your GitHub org/user name.
