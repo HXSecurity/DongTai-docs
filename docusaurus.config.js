@@ -30,7 +30,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: function ({ locale, docPath }) {
-            return `https://github.com/HXSecurity/DongTai-docs-docusaurus/edit/main/website/docs/${docPath}`;
+            return `https://github.com/HXSecurity/DongTai-docs-docusaurus/edit/main/docs/${docPath}`;
           },
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
