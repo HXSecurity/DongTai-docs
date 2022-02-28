@@ -12,6 +12,9 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '洞态文档',
+  scripts: [
+    {src: '/installGio.js',  async: true}
+  ],
   tagline: '了解洞态产品轻松上手的指南手册',
   url: 'https://docs.dongtai.io/',
   baseUrl: '/',
