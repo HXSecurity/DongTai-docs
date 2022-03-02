@@ -2,7 +2,8 @@
     "ignorePatterns": [
       {
         "pattern": "^http://localhost",
-        "pattern": ".*png$"
+        "pattern": ".*png$",
+        "pattern": ".*?https://openapi\\.iast\\.io.*?"
       }
     ],
     "timeout": "10s",
