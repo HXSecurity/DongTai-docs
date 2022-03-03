@@ -19,8 +19,8 @@ sidebar_position: 1
 | `iast.engine.delay.time`  | 延迟启动功能，单位：秒                 | Integer   |任意整型数字      | 0                     |
 | `iast.dump.class.enable`  | 是否 dump 修改后的字节码             | Boolean |`true` or `false`           | false     |
 | `iast.dump.class.path`    | dump 字节码的路径                   | String|任意有权限路径          | /tmp/iast-class-dump/ |
-| `dongtai.server.url`      | Dongtai OpenAPI Url                  | String   | URL 格式      |                       |
-| `dongtai.server.token`    | Dongtai OpenAPI Token                                     | String  |        |                       |
+| `dongtai.server.url`      | Dongtai OpenAPI URL                  | String   | URL 格式      |  https://openapi.iast.io  |
+| `dongtai.server.token`    | Dongtai OpenAPI Token             | String  |        | User Token   |
 | `dongtai.response.length` | 向 Dongtai OpenAPI 发送的响应体长度     | Integer |大于 0 的整形数字        | null                  |
 | `dongtai.log`             | 是否把日志输出到本地文件               | Boolean  | `true` or `false`       | true                  |
 | `dongtai.log.path`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         | agent.jar 当前目录    |

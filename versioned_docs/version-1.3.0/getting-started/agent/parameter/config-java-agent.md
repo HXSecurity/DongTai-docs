@@ -210,6 +210,29 @@ sidebar_position: 1
   |默认值  | 无 |
   |参数说明 | 当配置该参数启动时，会改变 agent 获取应用的 http 请求响应体的长度 |
 
+
+### ` dongtai.server.url `
+
+  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
+  |:----------|:---------------------------------|
+  |生效方式 | 启动时添加 `-Ddongtai.server.url=` |
+  |参数类型 | 字符串 |
+  |来源 | 配置文件 |
+  |可选参数 | URL 格式  |
+  |默认值  | https://openapi.iast.io |
+  |参数说明 | Server URL |  
+
+### ` dongtai.server.token `
+
+  |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  
+  |:----------|:---------------------------------|
+  |生效方式 | 启动时添加 `-Ddongtai.server.token=` |
+  |参数类型 | 字符串 |
+  |来源 | 配置文件 |
+  |可选参数 | 字符串  |
+  |默认值  | User Token |
+  |参数说明 | Server Token |    
+
 ### ` dongtai.log `
 
   |<div style={{paddingRight : '100px'}}>属性</div>  |<div style={{paddingRight : '580px'}}>值</div> |  

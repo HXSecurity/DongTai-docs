@@ -149,8 +149,13 @@ import Highlight from '@site/src/components/Highlight';
 
   不是，1.3.1 版本之前的 Agent 因 **包名变更** 无法使用 1.3.1 版本以后的 Server 端。
 
-  **仅升级至 1.3.1 版本的洞态 Server 后需重新下载及安装 Agent！**
+  <Highlight color="#E3242B">仅升级至 1.3.1 版本的洞态 Server 后需重新下载及安装 Agent ！</Highlight>
 
   [请参考 Agent 下载及安装 ](../../getting-started/start-project#2-安装-dongtai-iast-agent)
 
+  1.3.1 版本之后的每次重启或重新部署，**只要 Server 端升级了，Agent 就会从 Server 端拉取最新的 Agent。**
+
+  原理：`agent.jar` 只是个 **Loader**。只要应用启动的时候，会先从 Server 端把核心的 jar 包下载下来，然后用 **ClassLoader** 加载。
+
 ::: 
+

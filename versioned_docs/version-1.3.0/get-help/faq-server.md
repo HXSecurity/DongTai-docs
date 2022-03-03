@@ -16,7 +16,7 @@ sidebar_position: 2
 
 :::note 答复
 
-  [请参考初始化自定义数据库](../getting-started/deploy-server#初始化自定义数据库")
+  [请参考初始化自定义数据库](../getting-started/deploy-server#初始化自定义数据库)
 
 :::
 

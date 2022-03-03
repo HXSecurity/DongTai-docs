@@ -15,8 +15,8 @@ sidebar_position: 1
 
 :::note Server 部署或注册方案
 
-  * [Docker Compose](deploy-server#docker-compose)
-  * [Kubernetes](deploy-server#kubernetes)
+  * [Docker Compose](server/deploy-docker-compose)
+  * [Kubernetes](server/deploy-kubernetes)
   * [注册 SaaS 服务](https://jinshuju.net/f/I9PNmf) 
 
 :::
