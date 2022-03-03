@@ -1,0 +1,39 @@
+name: Deploy Dongtai Docs
+
+on:
+  release:
+    types: [ "created" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        
+      - name: Setup Node
+        uses: actions/setup-node@v2
+          
+      - name: Build Docusaurus static files
+        run: |
+          yarn
+          yarn build
+          
+      - name: Setup Ossutil
+        uses: manyuanrong/setup-ossutil@v2.0
+        with:
+          endpoint: ${{ secrets.DONGTAI_OSS_ENDPOINT }}
+          access-key-id: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_ID }}
+          access-key-secret: ${{ secrets.DONGTAI_OSS_ACCESS_KEY_SECRET }}
+
+      - name: Upload static file to oss
+        run: |
+          ossutil cp -rf build/   oss://dongtai-docs-test/
