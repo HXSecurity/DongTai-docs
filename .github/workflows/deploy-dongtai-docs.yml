@@ -24,7 +24,6 @@ jobs:
           
       - name: Build Docusaurus static files
         run: |
-          pwd
           yarn
           yarn build
           
@@ -37,4 +36,4 @@ jobs:
 
       - name: Upload static file to oss
         run: |
-          ossutil cp -rf build/   oss://dongtai-docs/
+          ossutil cp -rf build/   oss://dongtai-docs-test/
