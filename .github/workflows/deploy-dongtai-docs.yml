@@ -21,13 +21,12 @@ jobs:
         
       - name: Setup Node
         uses: actions/setup-node@v2
-        with:
-          node-version: '17.2.0'
           
       - name: Build Docusaurus static files
         run: |
-          npm install 
-          npm run build
+          pwd
+          yarn
+          yarn build
           
       - name: Setup Ossutil
         uses: manyuanrong/setup-ossutil@v2.0
