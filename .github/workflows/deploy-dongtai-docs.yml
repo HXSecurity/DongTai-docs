@@ -26,8 +26,8 @@ jobs:
           
       - name: Build Docusaurus static files
         run: |
-          yarn
-          yarn build
+          npm install 
+          npm run build
           
       - name: Setup Ossutil
         uses: manyuanrong/setup-ossutil@v2.0
