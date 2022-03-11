@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dongtai-docs
+  namespace: iast-prod
+  annotations:
+    kubesphere.io/description: dongtai-docs
+  labels:
+    app: dongtai-docs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dongtai-docs
+  template:
+    metadata:
+      labels:
+        app: dongtai-docs
+    spec:
+      containers:
+        - name: dongtai-docs-container
+          image: dongtai/dongtai-docs:VERSION
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "500m"
+              memory: 1000Mi
+            requests:
+              cpu: "500m"
+              memory: 1000Mi
+          env:
+            - name: aliyun_logs_iast_server_project
+              value: k8s-log-c541e7d8ffff2434a8b7b4fd7d8645d2a
+            - name: aliyun_logs_iast_server
+              value: stdout
