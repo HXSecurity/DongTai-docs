@@ -45,9 +45,31 @@ sidebar_position: 2
   使用以下命令将 `OpenApi` 扩容到 `number`
 
   ```bash
-  sudo docker-compose -p dongtai-iast up -d –scale dongtai-openapi=<number> –no-recreate
+  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d –no-recreate
   ```
+
+  例子：扩容 4 个 `dongtai-openapi`
+
+  ```bash
+  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d –no-recreate
+  ```  
 :::
+
+### 基于 docker-compose 扩容多个 `dongtai-engine`
+
+:::note 答复
+
+  使用以下命令将 `dongtai-engine` 扩容到 `number`
+
+  ```bash
+  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d –no-recreate
+  ```
+
+  例子：扩容 4 个 `dongtai-engine`
+
+  ```bash
+  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d –no-recreate
+  ```
 
 ### Centos7 部署报 `chown mod /var/lib/mysql permission denied`，如何解决
 
