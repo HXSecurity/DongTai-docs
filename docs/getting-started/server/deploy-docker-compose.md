@@ -87,6 +87,17 @@ csrf_trust_origins = .example.com
 
 :::
 
+:::note 自定义 SCA 配置
+
+需要使用离线 SCA 配置的用户， 可通过修改 `config-tutorial.ini` 文件, 配置如下：
+
+```bash
+[SCA]
+base_url = http://dongtai-openapi:8000/sca/v1
+```
+
+:::
+
 ## 升级
 
 升级配置，可直接升级至最新版本或是指定版本。
