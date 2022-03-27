@@ -25,7 +25,7 @@ sidebar_position: 1
 | `dongtai.log`             | 是否把日志输出到本地文件               | Boolean  | `true` or `false`       | true                  |
 | `dongtai.log.path`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         | agent.jar 当前目录    |
 | `dongtai.log.level`       | 指定日志等级                             | String    |`info`, `debug`      | info                  |
-| `dongtai.server.packag`       | 指定是否从洞态Server端下载agent依赖包           | boolean    |`true`, `false`      | true                  |
+| `dongtai.server.package`  | 指定是否从洞态Server端下载agent依赖包   | boolean    |`true`, `false`    | true                  |
 
 ## 热部署安装参数
 

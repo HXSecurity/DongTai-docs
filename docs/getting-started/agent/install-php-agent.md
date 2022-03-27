@@ -4,6 +4,10 @@ sidebar_position: 4
 
 # PHP Agent
 
+:::tip
+[靶场参考](../../introduction/detection#测试靶场)
+:::
+
 ## 安装环境
 
 * PHP 版本: 7.\*、8.0.9 +

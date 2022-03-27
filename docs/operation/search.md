@@ -8,7 +8,7 @@ sidebar_position: 4
 
 ## 搜寻请求
 
-![Image](/img/docs/operation/search/zh_search.png)
+![Image](../_resource/operation/search/zh_search.png)
 
 * 搜索请求可以根据 `URL`、`请求体`、`方法签名`、`响应头`、`请求头`、`请求体`、`污点数据`以及`时间区段`条件进行搜索。
 
@@ -16,6 +16,6 @@ sidebar_position: 4
 
 ## 请求列表
 
-![Image](/img/docs/operation/search/zh_search_list.png)
+![Image](../_resource/operation/search/zh_search_list.png)
 
 * 请求列表是搜索请求的列表，每个请求包含 `URL`、`Agent`、`用户`、`关联漏洞`、`项目`、`HTTP数据包`、`污点调用链的信息`。

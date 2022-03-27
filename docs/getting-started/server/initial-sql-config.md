@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 3
 ---
 
 # 初始化自定义数据库
@@ -22,6 +22,7 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211218-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20211230-release-1.2.0.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220111-release-1.3.0.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220218-release-1.3.1.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220316-release-1.4.0.sql
 
 # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
 cat *.sql | mysql -u<username> -h<url> -p --default-character-set=utf8mb4 dongtai_webapi

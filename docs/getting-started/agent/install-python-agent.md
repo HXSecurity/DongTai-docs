@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Python Agent
 
+:::tip
+[靶场参考](../../introduction/detection#测试靶场)
+:::
+
 ## 安装环境
 
 * 操作系统: Windows/Linux/macOS

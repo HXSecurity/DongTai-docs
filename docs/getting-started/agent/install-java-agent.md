@@ -7,6 +7,10 @@ import TabItem from '@theme/TabItem';
 
 # Java Agent
 
+:::tip
+[靶场参考](../../introduction/detection#测试靶场)
+:::
+
 ## 安装环境
 
 * 作业系统: Windows/Linux/Unix
@@ -32,7 +36,7 @@ import TabItem from '@theme/TabItem';
 * 完整启动方法参考示例： 
 
     ```bash
-    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar </code>
+    java -javaagent:"<server_root>/iast-tool/agent.jar" -jar <server_root>/webapp1.jar
     ```
 
 **卸载**
@@ -59,7 +63,7 @@ values={[
 
 1. 停止 **Tomcat**，进入 **Tomcat** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
 
-2. 在 `tomcat/bin/catalina.sh`，`if [&quot;$1&quot; = &quot;debug&quot;]; then` 前面一行添加以下内容：
+2. 在 `tomcat/bin/catalina.sh`，`if [ "$1" = "debug" ];` 前面一行添加以下内容：
 
     ```shell title="/tomcat/bin/catalina.sh"
     if [ "$1" = "start" -o "$1" = "run" ]; then
@@ -109,7 +113,7 @@ values={[
 </TabItem>	
 </Tabs>
 
-### Jboss
+### JBoss
 
 <Tabs
 className="java-jboss-tabs"
@@ -123,7 +127,7 @@ values={[
 
 **安装**
 
-1. 停止 **Jboss**，进入 **Jboss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+1. 停止 **JBoss**，进入 **JBoss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
 
 2. 进入 `jboss/bin/standalone.sh`，在 `# Display our environment` 前面一行添加如下内容：
 
@@ -135,7 +139,7 @@ values={[
 
 **卸载**
 
-1. 停止 **Jboss**，进入 **Jboss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+1. 停止 **JBoss**，进入 **JBoss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
 
 2. 在 `jboss/bin/standalone.sh`，找到并删除以下内容：
 
@@ -148,7 +152,7 @@ values={[
 
 **安装**
 
-1. 停止 **Jboss**，进入 **Jboss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+1. 停止 **JBoss**，进入 **JBoss** 根目录，新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
 
 2. 在 `jboss/bin/standalone.bat`， `:set JAVA_OPTS=-Dprogram.name=%PROGNAME% %JAVA_OPTS%` 后面一行添加以下内容：
 
@@ -160,7 +164,7 @@ values={[
 
 **卸载**
 
-1. 停止 **Jboss**，进入 **Jboss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
+1. 停止 **JBoss**，进入 **JBoss** 根目录，删除文件夹 `iast-tool` 以及文件夹中的内容。
 
 2. 在 `jboss/bin/standalone.bat`，找到并删除以下内容：
 

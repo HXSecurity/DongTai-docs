@@ -32,7 +32,7 @@ import Highlight from '@site/src/components/Highlight';
 
 > 「脚本部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
 
-* 部署
+### 部署
 
 ```bash
 # 克隆存储库
@@ -43,16 +43,28 @@ cd deploy/kubernetes
 ./install.sh -m NodePort -n dongtai
 ```
 
-* 卸载
+### 升级
 
-```bash
-kubectl delete namespace ${YourNamespace}
-```
+1. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
+
+	:::tip
+
+	只需导入欠缺的部分，比如：`v1.2.0` 升 `v1.4.0`，需导入 `v1.3.0 ～ v1.4.0` 的数据库。
+
+	:::
+
+2. 仓库拉取最新代码，编辑各个 deployment 组件的镜像版本号。
+
+### 卸载
+
+	```bash
+	kubectl delete namespace ${YourNamespace}
+	```
 
 
-:::note
+### 自定义配置
 
-💡 自定义配置
+:::note 数据库
 
 * m: 访问模式(mode)，可选: `NodePort LoadBalancer`, 默认为: NodePort
 
@@ -63,39 +75,53 @@ kubectl delete namespace ${YourNamespace}
 
 使用自定义数据库，请手动修改 `manifest/4.deploy-iast-server.yml` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
 
-
-* 访问
-
-	* NodePort
-
-		* 获取可用的 Node IP
-
-		```bash
-		kubectl get nodes -o wide |  awk {'print $1" " $2 " " $7'} | column -t
-		```
-
-		* 获取可用的NodePort
-
-		```bash
-		kubectl get svc dongtai-web-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}'
-		kubectl get svc dongtai-engine-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}')
-		```
-
-		* 访问地址:
-
-		```bash
-		http://${NodeIP}:${PORT}
-		```
-
-	* LoadBalancer
-
-		* 获取可用的 LoadBalancer IP 或者 DNS
-
-		```bash
-		kubectl get svc dongtai-web-pub-svc dongtai-engine-pub-svc -n dongtai-iast
-		```
 :::
 
+:::note 访问
+
+* NodePort
+
+	* 获取可用的 Node IP
+
+	```bash
+	kubectl get nodes -o wide |  awk {'print $1" " $2 " " $7'} | column -t
+	```
+
+	* 获取可用的NodePort
+
+	```bash
+	kubectl get svc dongtai-web-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}'
+	kubectl get svc dongtai-engine-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}')
+	```
+
+	* 访问地址:
+
+	```bash
+	http://${NodeIP}:${PORT}
+	```
+
+* LoadBalancer
+
+	* 获取可用的 LoadBalancer IP 或者 DNS
+
+:::
+
+:::note 扩容
+
+```bash
+kubectl scale deployments ${deployment-names} --replicas=${number} -n ${your-namespace}
+
+#举例扩容 5 个 Engine：
+kubectl scale deployments dongtai-engine --replicas=5 -n your-namespace
+```
+
+也可配置自动水平扩容，指南：[Pod 水平自动扩缩](https://kubernetes.io/zh/docs/tasks/run-application/horizontal-pod-autoscale/)
+
+```bash
+kubectl autoscale deployments ${deployment-names} -n ${your-namespace} --cpu-percent=80 --min=${number} --max=${number}
+```
+
+:::
 
 ## Helm 部署
 > 「Helm 部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
@@ -106,7 +132,7 @@ kubectl delete namespace ${YourNamespace}
 
 :::
 
-* 部署
+### 部署
 
 ```bash
 # 克隆存储库
@@ -122,16 +148,15 @@ helm install --create-namespace -n dongtai  dongtai-iast dongtai/dongtai-iast
 ```
 这个命令将会在 `dongtai` 命名空间部署 Dongtai IAST Server , 并且使用 `ClusterIP` 方式暴露服务。
 
-* 卸载
+### 卸载
 
 ```bash
 helm uninstall dongtai-iast -n dongtai
 ```
 
-:::note
+### 自定义配置
 
-💡 自定义配置
-
+:::note 配置
 
 * 使用自定义数据库，请手动修改 `/tmp/my-values.yml` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
 

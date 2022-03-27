@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # Go Agent
 
+:::tip
+[靶场参考](../../introduction/detection#测试靶场)
+:::
+
 ## 安装环境
 
 * Go 版本: 1.12 +
@@ -13,6 +17,7 @@ sidebar_position: 5
 * ORM library: gorm
 
 * 其他: httpRouter、 http
+
 
 ## 安装 Agent
 

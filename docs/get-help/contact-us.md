@@ -12,8 +12,8 @@ import Highlight from '@site/src/components/Highlight';
 
 * [GitHub Discussion](https://github.com/HXSecurity/DongTai/discussions/) 
 
-* 添加微信洞态小助理
+* 添加小助理 - 小依企微
 
-  <img src="/img/docs/get-help/qrcode/assistant.png" width="18%"/>
+  <img src="/img/docs/get-help/qrcode/assistant-xiaoyi.png" width="18%"/>
 
 :::
