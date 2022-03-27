@@ -6,6 +6,7 @@ sidebar_position: 1
 
 |发布版本|发布日期|更新日志|
 |:---|:----|:----|
+|v1.3.1|2022.03.28|[前往更新日志](/docs/changelog/version/v1.4.x/v1.4.0)|
 |v1.3.1|2022.02.23|[前往更新日志](/docs/changelog/version/v1.3.x/v1.3.1)|
 |v1.3.0|2022.01.11|[前往更新日志](/docs/changelog/version/v1.3.x/v1.3.0)|
 |v1.2.0|2022.01.04|[前往更新日志](/docs/changelog/version/v1.2.0)|
