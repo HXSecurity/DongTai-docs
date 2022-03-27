@@ -18,6 +18,17 @@ import Highlight from '@site/src/components/Highlight';
 
 :::
 
+### SAST 产品和 IAST 产品的技术区别
+
+:::note 答复
+
+  * SAST：根据不可信变量的变化，梳理污点传播过程
+  * IAST：根据不可信数据的变化，梳理污点传播过程
+
+[请参考洞态漏洞分析原理](../introduction/architecture#漏洞分析原理)
+
+:::
+
 ## 其他 
 
 ### 为何无法访问洞态 IAST 和火线官方网站
