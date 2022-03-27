@@ -45,13 +45,13 @@ sidebar_position: 2
   使用以下命令将 `OpenApi` 扩容到 `number`
 
   ```bash
-  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d –no-recreate
+  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d -–no-recreate
   ```
 
   例子：扩容 4 个 `dongtai-openapi`
 
   ```bash
-  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d –no-recreate
+  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d -–no-recreate
   ```  
 :::
 
@@ -62,13 +62,13 @@ sidebar_position: 2
   使用以下命令将 `dongtai-engine` 扩容到 `number`
 
   ```bash
-  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d –no-recreate
+  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d -–no-recreate
   ```
 
   例子：扩容 4 个 `dongtai-engine`
 
   ```bash
-  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d –no-recreate
+  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d -–no-recreate
   ```
 
 
