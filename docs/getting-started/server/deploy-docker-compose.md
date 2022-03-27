@@ -55,11 +55,13 @@ Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !*
 	```
 	```bash
 	# 部署指定版本
-	# 举例 1.3.1 版, <version> = 1.3.1
+	# 举例 1.4.0 版, <version> = 1.4.0
 	./dtctl install -v <version>
 	```
 
-:::note 自定义配置数据库
+## 自定义配置
+
+:::note 数据库
 
 
 使用自定义数据库，请手动修改 `config-tutorial.ini` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
@@ -67,14 +69,14 @@ Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !*
 修改完成后，在下述的部署过程选择 `-s` 略过相应的组件:
 
 ```bash
-./dtctl install -v 1.1.4 -s mysql
+./dtctl install -v 1.4.0 -s mysql
 ```
 * s: 跳过的资源 (skip), 可选: `mysql redis mysql`,`redis`,默认：不跳过
 * v: 需要被安装的版本
 
 :::
 
-:::note 自定义配置域名访问
+:::note 域名访问
 
 需要使用 HTTPS 域名访问的用户， 可通过修改 `config-tutorial.ini` 文件，增加如下配置，实现 CSRF 信任域名的配置，如：`https://xxx.example.com`，配置如下：
 
@@ -87,7 +89,7 @@ csrf_trust_origins = .example.com
 
 :::
 
-:::note 自定义 SCA 配置
+:::note SCA 配置
 
 需要使用离线 SCA 配置的用户，可按以下三个步离线添加配置：
 
@@ -111,6 +113,37 @@ csrf_trust_origins = .example.com
 	```
 
 :::
+
+:::note 扩容
+
+💡：**先使用 `./dtctl file` 导出 `docker-compose.yml`，再使用 `docker-compose` 执行扩容**
+
+#### OpenAPI 服务节点
+
+  * 使用以下命令将 `OpenApi` 数量扩容到 `number`
+	  ```bash
+	  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d --no-recreate
+	  ```
+
+  * 例子：扩容 4 个 `dongtai-openapi`
+	  ```bash
+	  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d -–no-recreate
+	  ```  
+
+#### Engine 服务节点
+
+  * 使用以下命令将 `Engine` 数量扩容到 `number`
+	  ```bash
+	  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d -–no-recreate
+	  ```
+
+  * 例子：扩容 4 个 `dongtai-engine`
+	  ```bash
+	  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d -–no-recreate
+	  ```
+:::
+
+
 
 ## 升级
 
