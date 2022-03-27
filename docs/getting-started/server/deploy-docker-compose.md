@@ -87,6 +87,31 @@ csrf_trust_origins = .example.com
 
 :::
 
+:::note 自定义 SCA 配置
+
+需要使用离线 SCA 配置的用户，可按以下三个步离线添加配置：
+
+1. 下载 SCA 数据库文件：
+
+	```bash
+	wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220114.sql
+	```
+
+2. 执行导入命令：
+
+	```bash
+	cat sca20220114.sql | mysql -u<username> -h<url> -p --default-character-set=utf8mb4 dongtai_webapi
+	```	
+
+3. 修改 `config-tutorial.ini` 文件, 配置如下：
+
+	```bash
+	[SCA]
+	base_url = http://dongtai-openapi:8000/sca/v1
+	```
+
+:::
+
 ## 升级
 
 升级配置，可直接升级至最新版本或是指定版本。

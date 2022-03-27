@@ -154,7 +154,7 @@ redis:
 helm install --create-namespace -n dongtai --values /tmp/my-values.yaml dongtai-iast dongtai/dongtai-iast
 ```
 
-* 也可以使用<code>--set</code>来覆盖单个值, 你可以使用<code>--set</code>将 ClusterIP 切换成 NodePort:
+* 也可以使用 `--set` 来覆盖单个值, 你可以使用 `--set` 将 ClusterIP 切换成 NodePort:
 
 ```bash
 helm install --create-namespace -n dongtai-test --set accessType=NodePort --set imageVersion=1.3.1 dongtai-iast dongtai/dongtai-iast
