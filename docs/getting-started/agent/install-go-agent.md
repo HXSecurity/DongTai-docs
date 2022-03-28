@@ -16,12 +16,16 @@ sidebar_position: 5
 
 * ORM library: gorm
 
-* 其他: httpRouter、 http
+* 其他: httpRouter、http
 
 
 ## 安装 Agent
 
 1. 将下载的 `dongtai-go-agent-config.yaml` 放置到项目根目录
+
+	:::info离线部署配置
+	在 go.mod 文件中添加 `replace github.com/HXSecurity/DongTai-agent-go => 本地动态路径` 
+	:::
 
 2. 在项目入口文件引入基础包 `_ "github.com/HXSecurity/DongTai-agent-go/run/base"`
 
@@ -42,3 +46,4 @@ sidebar_position: 5
 	```
 
 6. 重启应用服务（自动安装跳过此步）
+

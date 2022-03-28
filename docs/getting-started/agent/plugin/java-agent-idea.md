@@ -44,7 +44,11 @@ IntelliJ IDEA 版本：2020.3 以上
 
 :::tip
 
-`agentUrl, url`: 若使用洞态 IAST Server 端 SaaS 版，此栏位将预设自动输入。自动部署, <Highlight color="#E3242B"> 需要 </Highlight> 自行填入。
+`openapi`、`web` : 若使用洞态 IAST Server 端 SaaS 版，此栏位将预设自动输入。自动部署, <Highlight color="#E3242B"> 需要 </Highlight> 自行填入。
+
+* `openapi` : https://yourdomainname.com:port/openapi
+
+* `web` : https://yourdomainname.com
 
 :::
 

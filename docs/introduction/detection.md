@@ -53,14 +53,6 @@ import Highlight from '@site/src/components/Highlight';
 ||信任边界|✅||||
 |<Highlight color="#00ac46">提示</Highlight>|Cookie 未设置 Secure|✅||||
 
-## Agent 跨请求漏洞覆盖
-|<div style={{paddingRight : '100px'}}>漏洞等级</div> |<div style={{paddingRight : '100px'}}>漏洞类型</div> |<div style={{paddingRight : '30px'}}>Java</div> |<div style={{paddingRight : '20px'}}>Python</div> |<div style={{paddingRight : '50px'}}>PHP</div> |<div style={{paddingRight : '50px'}}>Go</div> |
-|:------------|:------------|:------:|:------:|:------:|:------:|
-|<Highlight color="#E3242B">高危</Highlight>|漏洞链路追踪|✅||||
-||未授权访问|||||
-||水平越权|||||
-||垂直越权|||||
-
 ## 测试靶场
 
 |Agent|靶场|

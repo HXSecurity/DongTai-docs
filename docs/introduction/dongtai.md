@@ -26,7 +26,7 @@ sidebar_position: 1
 
 ## 优势
 
-* 支援的检测语言：Java、Python、PHP、Go
+* 支持的检测语言：Java、Python、PHP、Go
 * 多环境部署方案：Docker、Kubernetes
 * SaaS 体验服务
 * 2 周稳定发版率
