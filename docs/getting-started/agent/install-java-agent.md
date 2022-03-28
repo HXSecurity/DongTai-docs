@@ -21,6 +21,11 @@ import TabItem from '@theme/TabItem';
 
 * 中间件: Any
 
+:::note
+
+Tomcat 目前只兼容 8，9 版
+
+:::
 
 ### Spring-boot/Netty/Jetty
 
