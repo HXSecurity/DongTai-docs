@@ -57,9 +57,9 @@ cd deploy/kubernetes
 
 ### 卸载
 
-	```bash
-	kubectl delete namespace ${YourNamespace}
-	```
+```bash
+kubectl delete namespace ${YourNamespace}
+```
 
 
 ### 自定义配置
