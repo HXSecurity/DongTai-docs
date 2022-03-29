@@ -165,6 +165,83 @@ csrf_trust_origins = .example.com
 	./dtctl upgrade -t <version>
 	```
 
+:::note 自定义数据库升级流程
+
+**部署时自定义数据库的用户不适用 `./dtctl upgrade`**，请参照下列升级流程：
+
+* 在 `DongTai/deploy/docker-compose` 创建 `docker-compose.yml` 文件。
+
+* 把下列样本中的 `{ChangeThisVersion}` 替代成需要**升级**的`版本号`，比如：`1.4.0`：
+
+	```yml title="/DongTai/deploy/docker-compose/docker-compose.yml"
+	version: "2"
+	services:
+	  dongtai-redis:
+	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:{ChangeThisVersion}"
+	    restart: always
+	    logging:
+	      driver: "json-file"
+	      options:
+	        max-size: "10m"
+	  dongtai-web:
+	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-web:{ChangeThisVersion}"
+	    restart: always
+	    ports:
+	      - "8088:80"
+	    volumes:
+	      - "./nginx.conf:/etc/nginx/nginx.conf"
+	    depends_on:
+	      - dongtai-server
+	    logging:
+	      driver: "json-file"
+	      options:
+	        max-size: "10m"
+
+	  dongtai-engine:
+	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{ChangeThisVersion}"
+	    restart: always
+	    entrypoint: ["/opt/dongtai/webapi/docker/entrypoint.sh", "worker"]
+	    volumes:
+	      - ./config-tutorial.ini:/opt/dongtai/webapi/conf/config.ini
+	    logging:
+	      driver: "json-file"
+	      options:
+	        max-size: "10m"
+	  dongtai-server:
+	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{ChangeThisVersion}"
+	    restart: always
+	    volumes:
+	      - ./config-tutorial.ini:/opt/dongtai/webapi/conf/config.ini
+	    logging:
+	      driver: "json-file"
+	      options:
+	        max-size: "10m"
+	  dongtai-engine-task:
+	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{ChangeThisVersion}"
+	    restart: always
+	    entrypoint: ["/opt/dongtai/webapi/docker/entrypoint.sh", "beat"]
+	    volumes:
+	      - ./config-tutorial.ini:/opt/dongtai/webapi/conf/config.ini
+	    logging:
+	      driver: "json-file"
+	      options:
+	        max-size: "10m"
+	volumes:
+	  mysql-vol:
+	```	
+
+* 在同目录下执行下列命令：
+
+	```bash
+	docker-compose up -d
+	```
+
+* 最后，参照[初始化自定义数据库](initial-sql-config)导入初始库，**只需导入增量**的数据库文件即可。
+
+	*如：1.3.1 升级，只需导入 update-20220316-release-1.4.0.sql*
+
+:::
+
 ## 卸载
 
 * 卸载配置
