@@ -122,24 +122,24 @@ csrf_trust_origins = .example.com
 
   * 使用以下命令将 `OpenApi` 数量扩容到 `number`
 	  ```bash
-	  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d --no-recreate
+	  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d
 	  ```
 
   * 例子：扩容 4 个 `dongtai-openapi`
 	  ```bash
-	  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d -–no-recreate
+	  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d
 	  ```  
 
 #### Engine 服务节点
 
   * 使用以下命令将 `Engine` 数量扩容到 `number`
 	  ```bash
-	  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d -–no-recreate
+	  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d
 	  ```
 
   * 例子：扩容 4 个 `dongtai-engine`
 	  ```bash
-	  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d -–no-recreate
+	  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d
 	  ```
 :::
 
@@ -233,7 +233,7 @@ csrf_trust_origins = .example.com
 * 在同目录下执行下列命令：
 
 	```bash
-	docker-compose up -d
+	docker-compose up -p dongtai -d
 	```
 
 * 最后，参照[初始化自定义数据库](initial-sql-config)导入初始库，**只需导入增量**的数据库文件即可。
