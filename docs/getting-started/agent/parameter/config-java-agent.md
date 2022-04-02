@@ -26,6 +26,8 @@ sidebar_position: 1
 | `dongtai.log.path`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         | agent.jar 当前目录    |
 | `dongtai.log.level`       | 指定日志等级                             | String    |`info`, `debug`      | info                  |
 | `dongtai.server.package`  | 指定是否从洞态Server端下载agent依赖包   | boolean    |`true`, `false`    | true                  |
+| `dongtai.cluster.name`    | 集群名称   | String    | URL 格式     |                |
+| `dongtai.cluster.version` | 集群版本   | String    | 集群版本号    |                  |
 
 ## 热部署安装参数
 
