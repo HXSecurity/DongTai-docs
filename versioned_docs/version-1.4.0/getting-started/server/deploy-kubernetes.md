@@ -91,7 +91,6 @@ kubectl delete namespace ${YourNamespace}
 
 	```bash
 	kubectl get svc dongtai-web-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}'
-	kubectl get svc dongtai-engine-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}')
 	```
 
 	* 访问地址:

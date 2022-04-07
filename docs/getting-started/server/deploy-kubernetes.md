@@ -49,7 +49,11 @@ cd deploy/kubernetes
 
 	:::tip
 
-	只需导入欠缺的部分，比如：`v1.2.0` 升 `v1.4.0`，需导入 `v1.3.0 ～ v1.4.0` 的数据库。
+	只需导入欠缺的部分，比如：`v1.2.0` 升 `v1.5.0`，需导入 `v1.3.0 ～ v1.5.0` 的数据库。
+
+	```
+	kubectl exec -i <namespace> <pod> -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < *.sql
+	```
 
 	:::
 
@@ -91,7 +95,6 @@ kubectl delete namespace ${YourNamespace}
 
 	```bash
 	kubectl get svc dongtai-web-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}'
-	kubectl get svc dongtai-engine-pub-svc -n dongtai-iast -o=jsonpath='{.spec.ports[0].nodePort}')
 	```
 
 	* 访问地址:
