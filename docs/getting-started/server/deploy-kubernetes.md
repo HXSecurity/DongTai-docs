@@ -109,22 +109,6 @@ kubectl delete namespace ${YourNamespace}
 
 :::
 
-:::note 扩容
-
-```bash
-kubectl scale deployments ${deployment-names} --replicas=${number} -n ${your-namespace}
-
-#举例扩容 5 个 Engine：
-kubectl scale deployments dongtai-engine --replicas=5 -n your-namespace
-```
-
-也可配置自动水平扩容，指南：[Pod 水平自动扩缩](https://kubernetes.io/zh/docs/tasks/run-application/horizontal-pod-autoscale/)
-
-```bash
-kubectl autoscale deployments ${deployment-names} -n ${your-namespace} --cpu-percent=80 --min=${number} --max=${number}
-```
-
-:::
 
 ## Helm 部署
 > 「Helm 部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
@@ -209,3 +193,19 @@ helm install --create-namespace -n dongtai-test --set accessType=NodePort --set 
 	* 至 **`系统配置 > 密码修改`** 修改密码后再重新登入。
 
 :::
+
+## 扩容
+
+```bash
+kubectl scale deployments ${deployment-names} --replicas=${number} -n ${your-namespace}
+
+#举例扩容 5 个 Engine：
+kubectl scale deployments dongtai-engine --replicas=5 -n your-namespace
+```
+
+也可配置自动水平扩容，指南：[Pod 水平自动扩缩](https://kubernetes.io/zh/docs/tasks/run-application/horizontal-pod-autoscale/)
+
+```bash
+kubectl autoscale deployments ${deployment-names} -n ${your-namespace} --cpu-percent=80 --min=${number} --max=${number}
+```
+
