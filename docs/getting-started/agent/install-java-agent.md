@@ -27,11 +27,11 @@ Tomcat 目前只兼容 8，9 版
 
 :::
 
-### Spring-boot/Netty/Jetty
+### Spring-boot/Netty/Jetty/Sofa
 
 **安装**
 
-1. 停止 **Springboot/Netty/Jetty** 服务，进入 **Springboot/Netty/Jetty** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），新建文件夹 `iast-tool`，将下载的 `agent.jar` 放到 `iast-tool` 目录下。
 
 2. 启动服务时，增加如下内容：
 
@@ -46,10 +46,11 @@ Tomcat 目前只兼容 8，9 版
 
 **卸载**
 
-1. 停止 **Springboot/Netty/Jetty** 服务，进入 **Springboot/Netty/Jetty** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
+1. 停止 **Springboot/Netty/Jetty/Sofa** 服务，进入 **Springboot/Netty/Jetty/Sofa** 目录（如：webapp1\_domain），删除文件夹 `iast-tool` 以及文件夹中的内容。
 
 
-2. 下次启动 **Springboot/Netty/Jetty** 服务时正常启动即可
+2. 下次启动 **Springboot/Netty/Jetty/Sofa** 服务时正常启动即可
+
 
 
 ### Tomcat
