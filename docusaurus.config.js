@@ -87,7 +87,7 @@ const config = {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'development',
-            label: '二次开发',
+            label: '开发者文档',
           },           
           {
             type: 'docSidebar',
