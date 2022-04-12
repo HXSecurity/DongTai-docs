@@ -42,7 +42,7 @@ sidebar_position: 4
 
 |<div style={{paddingRight : '60px'}}>开发语言</div> |中间件 |
 |:------------|:---------------------------------------------------------------------------------------------------------------------|
-|Java       |Any Java EE Server、GlassFish、Jetty、Red Hat JBoss Enterprise Application Platforms、Red Hat JBoss Web Server、Resin、Tomcat、WebLogic、WebSphere|
+|Java       |Any Java EE Server、GlassFish、Jetty、Sofa、Red Hat JBoss Enterprise Application Platforms、Red Hat JBoss Web Server、Resin、Tomcat、WebLogic、WebSphere、东方通|
 |Python     |Django、Flask                                                                                                                                           |
 |PHP        |Coming Soon                                                                                                                                             |
 |Go         |Coming Soon                                                                                                                                             |
