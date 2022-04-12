@@ -30,6 +30,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          remarkPlugins: [require('mdx-mermaid')],
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: function ({ locale, docPath }) {
@@ -82,6 +83,12 @@ const config = {
             sidebarId: 'api',
             label: 'API',
           }, 
+          {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'development',
+            label: '二次开发',
+          },           
           {
             type: 'docSidebar',
             position: 'left',
