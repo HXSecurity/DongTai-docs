@@ -27,7 +27,7 @@ import Highlight from '@site/src/components/Highlight';
 
 Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !**
 
-:::caution
+:::
 
 
 * 克隆存储库
@@ -171,7 +171,13 @@ csrf_trust_origins = .example.com
 
 * 在 `DongTai/deploy/docker-compose` 创建 `docker-compose.yml` 文件。
 
-* 把下列样本中的 `{ChangeThisVersion}` 替代成需要**升级**的`版本号`，比如：`1.4.0`：
+* 把下列样本中的 `{ChangeThisVersion}` 替代成需要**升级**的`版本号`：
+	
+	:::tip
+	* DongTai/deploy/latest_image.sh 可以查询到目前所有镜像最新的版本号。
+	
+	* 若宿住机的 port 有修正，请自行调配，预设为 `80`。
+	:::
 
 	```yml title="/DongTai/deploy/docker-compose/docker-compose.yml"
 	version: "2"
@@ -187,7 +193,8 @@ csrf_trust_origins = .example.com
 	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-web:{ChangeThisVersion}"
 	    restart: always
 	    ports:
-	      - "8088:80"
+    	// highlight-next-line		
+	      - "80:80"
 	    volumes:
 	      - "./nginx.conf:/etc/nginx/nginx.conf"
 	    depends_on:
@@ -233,7 +240,7 @@ csrf_trust_origins = .example.com
 * 在同目录下执行下列命令：
 
 	```bash
-	docker-compose up -p dongtai -d
+	docker-compose -p dongtai up -d
 	```
 
 * 最后，参照[初始化自定义数据库](initial-sql-config)导入初始库，**只需导入增量**的数据库文件即可。
