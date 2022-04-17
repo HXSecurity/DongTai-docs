@@ -33,7 +33,7 @@ const Bestpractices = [
   },
   {
     name: '🏆 【伍雄】',
-    url: 'https://mp.weixin.qq.com/s/R5x1pZm5kobY9tGdC1KV7Q',
+    url: 'https://mp.weixin.qq.com/s/R5x1pZm5kobY9tGdC1KV7Qhttps://mp.weixin.qq.com/s?__biz=MzU4MjEwNzMzMg==&mid=2247490611&idx=1&sn=fb50f059ed07602fd6cddb57d4b633cc&source=41#wechat_redirect',
     description: (
       <Translate id="Bestpractice.wuxiong.description">
         请求管理｜洞态 IAST 在好大夫 SDL 中的最佳实践
