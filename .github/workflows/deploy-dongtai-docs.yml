@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy-docs:
-    name: "Deploy Docs"
+    name: "Deploy Dongtai Docs"
     runs-on: ubuntu-latest
     steps:
       - run: curl -X POST -d {} https://api.netlify.com/build_hooks/${{ secrets.DOCS_NETLIFY_BUILD_HOOK }}
