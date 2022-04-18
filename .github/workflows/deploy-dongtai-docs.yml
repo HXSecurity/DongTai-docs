@@ -2,45 +2,13 @@ name: Deploy Dongtai Docs
 
 on:
   release:
-    types: [ "created" ]
+    types: ["created"]
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  build:
+  deploy-docs:
+    name: "Deploy Docs"
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Login to DockerHub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DONGTAI_DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DONGTAI_DOCKERHUB_TOKEN }}
-
-      - name: Build to local
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: |
-            dongtai/dongtai-docs:0.1.${{github.run_number}}
-
-      - name: Deploy
-        uses: wahyd4/kubectl-helm-action@master
-        env:
-          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-        with:
-          args: |
-            find deploy/deploy-dongtai-docs-prod.yml -type f -exec sed -i 's/VERSION/0.1.${{github.run_number}}/g' {} \;
-            ls deploy/deploy-dongtai-docs-prod.yml | xargs -I {} kubectl apply -f {}
+      - run: curl -X POST -d {} https://api.netlify.com/build_hooks/${{ secrets.DOCS_NETLIFY_BUILD_HOOK }}
