@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/zh"
+  to = "/"
+  status = 301
+  force = true
+  
