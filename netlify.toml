@@ -1,6 +1,5 @@
 [[redirects]]
-  from = "/zh"
-  to = "/"
+  from = "/zh/*"
+  to = "/:splat"
   status = 301
   force = true
-  
