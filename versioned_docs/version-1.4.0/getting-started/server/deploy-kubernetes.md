@@ -57,7 +57,7 @@ cd deploy/kubernetes
 
 2. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
 
-	只需执行部分增量的 sql 文件，比如：`v1.2.0` 升 `v1.4.0`，需导入 `v1.3.0 ～ v1.5.0` 的 sql 文件。
+	只需执行部分增量的 sql 文件，比如：`v1.2.0` 升 `v1.4.0`，需导入 `v1.3.0 ～ v1.4.0` 的 sql 文件。
 
 	```bash
 	kubectl exec -i -n {{namespace}} {{mysql-pod}} -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < *.sql
