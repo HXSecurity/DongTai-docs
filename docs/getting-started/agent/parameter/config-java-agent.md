@@ -13,9 +13,6 @@ sidebar_position: 1
 | `dongtai.app.create`      | 设置是否自动创建项目   | Boolean    |`true` or `false`     | false                 |
 | `dongtai.debug`           | 开启后加载本地系统临时目录中的检测引擎  | Boolean   |`true` or `false`       | false                 |
 | `iast.server.mode`        | local模式支持、POST请求包展示、污点位置及污点值展示等功能 | String |`local` or `remote`|  local    |
-| `iast.proxy.enable`       | HTTP代理模式是否启用     | Boolean   |`true` or `false`        | false                 |
-| `iast.proxy.host`         | HTTP 代理的域名 (IP)         | String    |代理的域名 (IP)      | null                  |
-| `iast.proxy.port`         | HTTP 代理的端口                   | String   |端口 (1 to 65535)       | 80                    |
 | `iast.engine.delay.time`  | 延迟启动功能，单位：秒                 | Integer   |任意整型数字      | 0                     |
 | `iast.dump.class.enable`  | 是否 dump 修改后的字节码             | Boolean |`true` or `false`           | false     |
 | `iast.dump.class.path`    | dump 字节码的路径                   | String|任意有权限路径          | /tmp/iast-class-dump/ |
@@ -73,12 +70,6 @@ sidebar_position: 1
 
   ```bash
   java -javaagent:/path/to/agent.jar -Diast.dump.class.enable=true -Diast.dump.class.path=/tmp/class -jar SpringDemo.jar
-  ```
-
-* 当前网络无法访问洞态云端需设置 HTTP 代理，以设置代理 `10.100.100.1:80` 为例：
-
-  ```bash
-  java -javaagent:/path/to/agent.jar -Diast.proxy.enable=true -Diast.proxy.host=10.100.100.1 -Diast.proxy.host=80 -jar SpringDemo.jar
   ```
 
 * 当需要设置检测能力为 `hunter/normal` 时（`hunter` 模式的使用场景：代码审计，`normal` 模式使用场景：企业内部检测漏洞）：
