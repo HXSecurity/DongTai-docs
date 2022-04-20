@@ -59,7 +59,7 @@ cd deploy/kubernetes
 
 2. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
 
-	只需导入欠缺的部分，比如：`v1.2.0` 升 `v1.5.0`，需导入 `v1.3.0 ～ v1.5.0` 的数据库。
+	只需执行部分增量的 sql 文件，比如：`v1.4.0` 升 `v1.5.0`，需导入 `v1.4.0 ～ v1.5.0` 的 sql 文件。
 
 	```bash
 	kubectl exec -i -n {{namespace}} {{mysql-pod}} -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < *.sql
@@ -69,7 +69,7 @@ cd deploy/kubernetes
 
 	a. 使用 `DongTai/deploy/kubernetes/install.sh` 每个组件的镜像版本号。
 
-	b. 编辑各个 deployments 组件的镜像版本号:
+	b. 编辑及执行各个 deployments 组件的镜像版本号:
 	```bash
 	kubectl set image deploy dongtai-engine     dongtai-engine-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
 	kubectl set image deploy dongtai-engine-task  dongtai-engine-task-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
