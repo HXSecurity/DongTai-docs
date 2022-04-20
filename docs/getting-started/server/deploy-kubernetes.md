@@ -30,7 +30,11 @@ import Highlight from '@site/src/components/Highlight';
 
 ## 脚本部署
 
-> 「脚本部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
+:::caution 注意
+
+「脚本部署」部分内置了 Demo 数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
+
+:::
 
 ### 部署
 
@@ -45,19 +49,35 @@ cd deploy/kubernetes
 
 ### 升级
 
-1. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
+> 文件内容`{{}}`是需要修改的部分
 
-	:::tip
+1. 备份数据库。
+
+	```bash
+	kubectl exec -n {{namespace}} {{mysql-pod}} -- sh -c 'exec mysqldump --all-databases -uroot -p"dongtai-iast"' > dongtai-mysql-bak-$(date '+%Y-%m-%d').sql
+	```
+
+2. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
 
 	只需导入欠缺的部分，比如：`v1.2.0` 升 `v1.5.0`，需导入 `v1.3.0 ～ v1.5.0` 的数据库。
 
-	```
-	kubectl exec -i <namespace> <pod> -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < *.sql
+	```bash
+	kubectl exec -i -n {{namespace}} {{mysql-pod}} -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < *.sql
 	```
 
-	:::
+3. 仓库拉取最新代码，编辑各个 deployments 组件的镜像版本号。
 
-2. 仓库拉取最新代码，编辑各个 deployment 组件的镜像版本号。
+	a. 使用 `DongTai/deploy/kubernetes/install.sh` 每个组件的镜像版本号。
+
+	b. 编辑各个 deployments 组件的镜像版本号:
+	```bash
+	kubectl set image deploy dongtai-engine     dongtai-engine-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-engine-task  dongtai-engine-task-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-server       dongtai-server-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-web          dongtai-web-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-web:{{ChangeThisVersion}} -n {{namespace}}
+	```
+
+
 
 ### 卸载
 
@@ -106,6 +126,19 @@ kubectl delete namespace ${YourNamespace}
 * LoadBalancer
 
 	* 获取可用的 LoadBalancer IP 或者 DNS
+
+:::
+
+:::note 域名访问
+
+需要使用 HTTPS 域名访问的用户， 可通过修改 `4.deploy-iast-server.yml` 文件，增加如下配置，实现 CSRF 信任域名的配置，如：`https://xxx.example.com`，配置如下：
+
+```bash
+[security]
+csrf_trust_origins = .example.com
+```
+
+* 若有多个 HTTPS 域名进行绑定，域名间通过 "," 连接，如：`.example.com`, `.iast.io`, `.dongtai.io`
 
 :::
 
