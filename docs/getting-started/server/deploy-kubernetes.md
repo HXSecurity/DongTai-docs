@@ -51,6 +51,10 @@ cd deploy/kubernetes
 
 > 文件内容`{{}}`是需要修改的部分
 
+> v1.3.1 以前版本升级请参照[此升级方式](/docs/getting-started/server/deploy-kubernetes#升级)
+
+
+
 1. 备份数据库。
 
 	```bash
