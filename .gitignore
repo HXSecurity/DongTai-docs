@@ -24,3 +24,7 @@ yarn-error.log*
 
 # ESLint
 .eslintcache
+
+# search-crawd
+.env
+config.json
