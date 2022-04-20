@@ -157,6 +157,7 @@ const sidebars = {
         },        
       ],
     },
+    'user-case',    
     'resource-case',
   ],
   api: [
