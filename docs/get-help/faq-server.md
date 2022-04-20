@@ -110,3 +110,17 @@ sidebar_position: 2
 
 :::
 
+### K8S 如何备份数据库资料
+
+:::note 答复
+
+  * 备份
+  ```
+  kubectl exec -n <namespace> <pod> -- sh -c 'exec mysqldump --all-databases -uroot -p"dongtai-iast"' > dongtai-mysql-bak-yyyymmdd.sql
+  ```
+  * 导入
+  ```
+  kubectl exec -i <namespace> <pod> -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < dongtai-mysql-bak-yyyymmdd.sql
+  ```
+::: 
+

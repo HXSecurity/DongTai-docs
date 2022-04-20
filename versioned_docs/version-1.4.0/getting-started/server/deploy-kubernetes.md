@@ -45,15 +45,37 @@ cd deploy/kubernetes
 
 ### 升级
 
-1. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
+> 文件内容`{{}}`是需要修改的部分
 
-	:::tip
+> v1.3.1 以前版本升级请参照以下升级方式 
 
-	只需导入欠缺的部分，比如：`v1.2.0` 升 `v1.4.0`，需导入 `v1.3.0 ～ v1.4.0` 的数据库。
+1. 备份数据库。
 
-	:::
+	```bash
+	kubectl exec -n {{namespace}} {{mysql-pod}} -- sh -c 'exec mysqldump --all-databases -uroot -p"dongtai-iast"' > dongtai-mysql-bak-$(date '+%Y-%m-%d').sql
+	```
 
-2. 仓库拉取最新代码，编辑各个 deployment 组件的镜像版本号。
+2. 下载和导入数据库资料，数据库资料可参阅[自定义数据库](initial-sql-config)。
+
+	只需执行部分增量的 sql 文件，比如：`v1.2.0` 升 `v1.4.0`，需导入 `v1.3.0 ～ v1.5.0` 的 sql 文件。
+
+	```bash
+	kubectl exec -i -n {{namespace}} {{mysql-pod}} -- mysql  -uroot -p"dongtai-iast" dongtai_webapi < *.sql
+	```
+3. 仓库拉取最新代码，修改配置文件和编辑各个 deployments 组件的镜像版本号。
+
+	a. 使用 `DongTai/deploy/kubernetes/install.sh` 每个组件的镜像版本号。
+
+	b. 编辑 [upgrade-legacy.yaml](https://github.com/HXSecurity/DongTai/blob/main/deploy/kubernetes/upgrade-legacy.yaml)。
+	
+	c. 执行更新配置文件 `kubectl apply -f upgrade-legacy.yaml`。
+
+	d. 执行以下指令删除 `dongtai-webapi`、`dongtai-openapi`， v1.4.0 已合并成 `dongtai-server`。
+	
+	```bash
+	kubectl delete deployment dongtai-webapi dongtai-openapi -n {{namespace}}
+	```
+
 
 ### 卸载
 
