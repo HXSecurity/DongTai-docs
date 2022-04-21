@@ -64,7 +64,7 @@ cd deploy/kubernetes
 	```
 3. 仓库拉取最新代码，修改配置文件和编辑各个 deployments 组件的镜像版本号。
 
-	a. 使用 `DongTai/deploy/kubernetes/install.sh` 检查每个组件的镜像最新版本号。
+	a. 使用 `DongTai/deploy/latest_image.sh` 检查每个组件的镜像最新版本号。
 
 	b. 编辑 [upgrade-legacy.yaml](https://github.com/HXSecurity/DongTai/blob/main/deploy/kubernetes/upgrade-legacy.yaml)。
 	
