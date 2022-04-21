@@ -71,7 +71,7 @@ cd deploy/kubernetes
 
 3. 仓库拉取最新代码，编辑各个 deployments 组件的镜像版本号。
 
-	a. 使用 `DongTai/deploy/kubernetes/install.sh` 每个组件的镜像版本号。
+	a. 使用 `DongTai/deploy/kubernetes/install.sh` 检查每个组件的镜像最新版本号。
 
 	b. 编辑及执行各个 deployments 组件的镜像版本号:
 	```bash
