@@ -28,7 +28,7 @@ sidebar_position: 1
 
 ## 热部署安装参数
 
-| 参数名             | 说明                                         | 类型      |可选参数    预设值               |
+| 参数名             | 说明                                         | 类型      |可选参数 |   预设值               |
 | :--------|:--------|:--------| :--------| :--------|
 | `app_name`       | 设置项目名称                           | String     | 名称保证唯一   | Demo Project          |
 | `app_create`     | 设置是否自动创建项目                   | Boolean    | `true` or `false`     | false               |
@@ -38,6 +38,11 @@ sidebar_position: 1
 | `dongtai_token`  | Dongtai OpenAPI Token                  | String     |       |                      |
 | `mode`           | Agent 加载/卸载                        | String     | `install` or `uninstall` | |
 | `pid`            | 应用程序进程 ID                        | String     |                  |    |
+| cluster_name     | 设置集群名称                           | String       |名称保证唯一   |   |
+| cluster_version  | 设置集群版本                           | String       |集群版本号  |   |
+| server_package   | 设置是否从云端下载引擎                 | String       | `true` or `false`     |   |
+| log_level        | 设置日志等级                           | String       |                      |   |
+| log_path         | 设置日志存放路径设置是否从云端下载引擎 | String | 任意有读写权限的目录    |   |
 
 
 ## 用例
@@ -76,4 +81,9 @@ sidebar_position: 1
 
   ```bash
   java -javaagent:/path/to/agent.jar -Diast.mode=hunter/normal -jar SpringDemo.jar
+  ```
+
+* 当热部署安装需集群配置时的参数参考：
+  ```bash
+  java -jar agent.jar -m install -p pid --app_name "app_name" --app_create "true" --app_version "v1.0" --dongtai_server "https://iast.io/openapi" --dongtai_token "a303ab4bedc93f96808335d023d7ac4d2ba00773" --cluster_name "cluster_name" --cluster_version "v1.0" --server_package "false" --log_level "info" --log_path "/tmp"
   ```
