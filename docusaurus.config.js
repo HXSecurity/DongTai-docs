@@ -59,9 +59,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({    
       algolia: {
-        appId: '3J96QAFH37',
-        apiKey: '498a632bcdf6a800fc90fc4d1233ff97',
-        indexName: 'dongtai-search',
+        appId: 'VC3Q2ASVJO',
+        apiKey: 'a67127d82bb304e28b333b67884bc9d7',
+        indexName: 'dongtai',
         contextualSearch: true,
       },      
       navbar: {
