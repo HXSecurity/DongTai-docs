@@ -1,102 +1,19 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # 系统配置
 
-系统配置在上方菜单栏的左边第五个，收录 DongTai IAST 的配置。其子功能如下：
+点选右上角的 ⚙️ 按钮是洞态 IAST 的系统配置，系统配置里包含：策略管理、密码修改、品牌设置、状态监控、操作日志、洞态版本的管理配置。
 
-## Agent 管理
-
-![Image](../_resource/operation/server/zh_agent_list.png "")
-
-* 用来对 Agent 进行查看、管理和监控。
-
-* 根据运行状态分为 `运行中 Agent` 和 `未运行 Agent`。
-
-* Agent 管理的功能
-
-	* 开启 Agent : 开开启核心检测引擎，开启数据上报。
-
-	* 禁用 Agent : 禁用核心检测引擎，关闭 Agent 端的数据采集，关闭除了心跳之外的数据上报。
-
-	* 卸载 Agent : 把应用的 Agent 卸载掉。
-
-	* 注册 Agent : 将已卸载 Agent 的应用重新加载 Agent。
-
-	* 恢复 Agent : 当遇到熔断时，强制恢复 Agent 的运作（暂时性）。
-
-	* 删除 Agent : 删除 Agent 所产生的数据。
-
-	:::tip
-
-	支持对 Agent 进行批量`启用`、`禁用`、`删除`。
-
-	:::
-
-## Agent 配置
-
-### 全局配置
-
-![Image](../_resource/operation/server/zh_agent_global_config.png "")
-
-* 停止阈值以及主动验证设定。
-
-* 停止阈值 : 当CPU利用率满足阈值条件时，Agent自动停止。当CPU利用率低于阈值条件时，Agent自动启动。
-
-	:::tip
-
-	此阈值条件只有系统超级使用者能设定。
-
-	:::
-
-* 主动验证 : 用于验证存在污点调用链的漏洞是否真实有效。
-
-	:::tip
-
-	主动验证时，Engine 自动识别攻击参数位置，并构造 payload。
-
-	然后从 Agent 内部重放 HTTP/HTTPS 流量，进行验证。
-
-	该功能非必须功能，关闭不会造成漏洞检测结果的变化，可自行关闭。
-
-	:::
-
-### 熔断降级
-
-![Image](../_resource/operation/server/zh_agent_circuit_breaker.png "")
-
-* 用来保证业务方服务的可用性及稳定性的监控降级配置。
-
-![Image](../_resource/operation/server/zh_agent_circuit_breaker_config.png "")
-
-* 监控降级配置：
-
-	* 筛选标签 : 配置集群标签参数
-
-	* 单请求 hook 限流 : 限制单个请求内每秒的 hook 数量。
-
-	* 高频流量限流 : 限制每秒处理请求的数量。
-
-	* JVM CPU 最大阈值 : JVM CPU 占用率超过最大阈值开始降级。
-
-	* JVM CPU 风险阈值 : JVM CPU 占用率多次（默认三次）超过风险阈值开始降级。
-
-	* JVM 内存最大阈值 : JVM 内存占用率超过最大阈值开始降级。
-
-	* JVM 内存风险阈值 : JVM 内存占用率多次（默认三次）超过风险阈值开始降级。
-
-	:::info 高级配置
-
-	开启`高级模式`，参阅配置提示：
-
-	![Image](../_resource/operation/server/zh_agent_circuit_breaker_config_advanced.png "")
-	
-	:::
+![Image](images/zh_bars.png)
 
 ## 策略管理
+策略管理涵盖漏洞检测策略管理、漏洞检测策略模版管理、自定义漏洞检测规则已经敏感信息配置。
 
-![Image](../_resource/operation/server/zh_policy_list.png "")
+### 策略管理
+
+![Image](images/zh_policy_management.png "")
 
 * 用来对漏洞检测时的策略进行管理。
 
@@ -109,25 +26,17 @@ sidebar_position: 5
 
 	:::
 
-## 策略模版管理
+### 策略模版管理
 
-![Image](../_resource/operation/server/zh_policy_manage.png "")
+![Image](images/zh_policy_template.png "")
 
 * 让用户自定义检测策略模版。
 
 * 快速梳理相关漏洞即可实现漏洞的检测与收敛。
 
-## 敏感信息配置
+### 自定义规则
 
-![Image](../_resource/operation/server/zh_sensitive_manage.png "")
-
-* 为了检测敏感信息泄漏的安全风险，需要配置敏感信息的匹配规则及相关的策略。
-
-* 支持 HTTP 请求中请求参数和响应体的检测。
-
-## 自定义规则
-
-![Image](../_resource/operation/server/zh_hook_custom.png "")
+![Image](images/zh_rule.png "")
 
 * 自定义规则污点源方法规则、传播方法规则、过滤方法规则、危险方法规则进行管理。
 	
@@ -141,33 +50,40 @@ sidebar_position: 5
 
 * 支持配置 Hook 深度（仅 Hook 当前类、仅 Hook 子类、 Hook 当前类及子类）
 
-## 状态监控
+### 敏感信息配置
 
-![Image](../_resource/operation/server/zh_status_monitor.png "")
+![Image](images/zh_sensitive_management.png "")
 
-* 监控 OpenAPI、Engine、和更新 Agent 和消息队的列状态监控。
+* 为了检测敏感信息泄漏的安全风险，需要配置敏感信息的匹配规则及相关的策略。
+
+* 支持 HTTP 请求中请求参数和响应体的检测。
 
 ## 密码修改
 
-![Image](../_resource/operation/server/zh_pwd_change.png "")
+![Image](images/zh_change_pwd.png "")
 
 * 当前用户修改登陆密码。
 
+## 品牌配置
+
+![Image](images/zh_dongtai_logo.png "")
+
+* 在品牌配置中可替换洞态 IAST 的 Logo 以及 Icon 样式。
+
+## 状态监控
+
+![Image](images/zh_dongtai_status.png "")
+
+* 状态监控用于监控 OpenAPI 和 Engine 状态、更新 Agent 和消息队列状态监控。
+
 ## 操作日志
 
-![Image](../_resource/operation/server/zh_ops_log.png "")
+![Image](images/zh_dongtai_log.png "")
 
-* 记录了用户在云端的操作记录。
+* 状态监控用于监控 OpenAPI 和 Engine 状态、更新探针和消息队列状态监控。
 
 ## 关于洞态
 
-![Image](../_resource/operation/server/zh_about_us.png "")
+![Image](images/zh_dongtai_version.png "")
 
 * 可在此页面查询 DongTai IAST 当前版本。
-
-### 组件版本详情
-
-* 点选 `详细信息` 查看洞态各个组件版本。
-
-
-![Image](../_resource/operation/server/zh_about_us_detail.png "")
