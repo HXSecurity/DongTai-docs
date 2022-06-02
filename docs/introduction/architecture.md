@@ -106,7 +106,7 @@ DongTai Server 架构的主要组成部分，提供了用户管理界面，使�
 
 :::info
 
-目前支援的检测语言：Java、Python、PHP、Go
+目前支持的检测语言：Java、Python、PHP、Go
 
 :::
 
