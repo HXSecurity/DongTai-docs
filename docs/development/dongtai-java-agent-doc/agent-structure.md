@@ -6,7 +6,7 @@ sidebar_position: 5
 
 DongTai Java Agent 工作流：
 
-![Image](../../_resource/development/dongtai-java-agent-doc/workflow.png)
+![Image](images/workflow.png)
 
 DongTai Java Agent 由 dongTai-agent、dongtai-api、dongTai-core、dongtai-log、dongtai-spring-api、dongtai-spy 组成。
 

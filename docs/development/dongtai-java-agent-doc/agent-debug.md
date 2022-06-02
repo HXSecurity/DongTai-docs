@@ -9,11 +9,11 @@ sidebar_position: 7
 
 3. 使用 Remote JVM Debug 功能
 
-   ![Image](../../_resource/development/dongtai-java-agent-doc/springtest_config.png)
+   ![Image](images/springtest_config.png)
 
 4. 进行配置
 
-   ![Image](../../_resource/development/dongtai-java-agent-doc/remote_debug.png)
+   ![Image](images/remote_debug.png)
 
    :::note 参数
    - Host：运行该项目的远程IP
