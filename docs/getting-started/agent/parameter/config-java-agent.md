@@ -38,11 +38,11 @@ sidebar_position: 1
 | `dongtai_token`  | Dongtai OpenAPI Token                  | String     |       |                      |
 | `mode`           | Agent 加载/卸载                        | String     | `install` or `uninstall` | |
 | `pid`            | 应用程序进程 ID                        | String     |                  |    |
-| cluster_name     | 设置集群名称                           | String       |名称保证唯一   |   |
-| cluster_version  | 设置集群版本                           | String       |集群版本号  |   |
-| server_package   | 设置是否从云端下载引擎                 | String       | `true` or `false`     |   |
-| log_level        | 设置日志等级                           | String       |                      |   |
-| log_path         | 设置日志存放路径设置是否从云端下载引擎 | String | 任意有读写权限的目录    |   |
+| `cluster_name`     | 设置集群名称                           | String       |名称保证唯一   |   |
+| `cluster_version` | 设置集群版本                           | String       |集群版本号  |   |
+| `server_package`   | 设置是否从云端下载引擎                 | String       | `true` or `false`     |   |
+| `log_level`        | 设置日志等级                           | String       |                      |   |
+| `log_path`         | 设置日志存放路径设置是否从云端下载引擎 | String | 任意有读写权限的目录    |   |
 
 
 ## 用例
