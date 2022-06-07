@@ -47,3 +47,17 @@ sidebar_position: 5
 
 6. 重启应用服务（自动安装跳过此步）
 
+
+:::info
+
+可在命令行添加参数来配置自动创建项目、项目名称、项目版本号等。
+
+* `DongtaiGoProjectName=true` 为可选参数，将自动创建项目。 
+* `DongtaiGoProjectName=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
+* `DongtaiGoProjectVersion=<application version>` 为可选参数，会自动创建项目版本。
+
+[🔗 : Go Agent 配置参数](./parameter/config-go-agent)
+
+如果不配置上述参数，也可进入项目管理中进行手工绑定。
+
+:::

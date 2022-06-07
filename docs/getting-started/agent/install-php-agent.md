@@ -40,3 +40,17 @@ sidebar_position: 4
 	* `php –m` 查看会有 dongtai\_php\_agent，即安装成功。
 
 	:::
+
+:::info
+
+可通过配置文件 `dongtai_agent_php.ini` 自动创建项目、项目名称、项目版本号等。
+
+* `dongtai.project.auto_create=1` 为可选参数，将自动创建项目。 
+* `dongtai.project.name=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
+* `dongtai.project.version=<application version>` 为可选参数，会自动创建项目版本。
+
+[🔗 : PHP Agent 配置参数](./parameter/config-php-agent)
+
+如果不配置上述参数，也可进入项目管理中进行手工绑定。
+
+:::
