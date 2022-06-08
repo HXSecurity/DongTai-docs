@@ -23,6 +23,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'HXSecurity', // Usually your GitHub org/user name.
   projectName: 'DongTai-docs-docusaurus', // Usually your repo name.
+  trailingSlash: false,
 
   presets: [
     [
@@ -118,7 +119,7 @@ const config = {
           href: 'https://opensource.facebook.com',
         },
         // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} HXSecurity-DongTai. Built with Docusaurus.`,
       },
     }),
 };
