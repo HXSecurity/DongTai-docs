@@ -74,7 +74,7 @@ sidebar_position: 8
 			"package": {
 				"id": 1615787,
 				"aql": "maven:org.mybatis:mybatis:3.2.8:",
-				"hash": "07b6bf82cea13570b5290d6ed841283a1fcce170",
+				"hash": "7044b00e7dc0d1b0b54d184a1dd33e36acc19509",
 				"ecosystem": "Maven",
 				"name": "org.mybatis:mybatis",
 				"version": "3.2.8",
@@ -111,4 +111,3 @@ sidebar_position: 8
 	|package.name |包名 |
 	|package.version |包版本 |
 	|package.license |包的授权信息 |
-

@@ -219,6 +219,24 @@ graph TD;
 
   `code:com.secnium.iast.core.enhance.sca.ScaScanner#scanForSCA`
 
+:::note 洞态 java agent 获取第三方组件原理概述
+
+* jar包启动
+
+  Agent 通过获取类路径来获取 app 的 jar 包路径，jar 包内包含了该应用的所有依赖。Agent 将其解析并计算 SHA-1 值上报到 Server 端，进行漏洞库比对
+
+* war包启动
+
+  原理与jar包类似，不再赘述
+
+* cp 引入依赖的方式启动
+
+  Agent 会获取到 -classpath 环境变量的值内容，从而获取到第三方依赖，将其解析并计算 SHA-1 值上报到 Server端，进行漏洞库比对
+
+代码：`io/dongtai/iast/core/bytecode/sca`
+
+:::
+
 ### 方法调用链
 
 - 节点生成
