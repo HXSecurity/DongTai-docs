@@ -55,7 +55,7 @@ Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !*
 	```
 	```bash
 	# 部署指定版本
-	# 举例 1.4.0 版, <version> = 1.4.0
+	# 举例 1.8.0 版, <version> = 1.8.0
 	./dtctl install -v <version>
 	```
 
@@ -171,71 +171,12 @@ csrf_trust_origins = .example.com
 
 * 在 `DongTai/deploy/docker-compose` 创建 `docker-compose.yml` 文件。
 
-* 把下列样本中的 `{ChangeThisVersion}` 替代成需要**升级**的`版本号`：
-	
+* 把 [docker-compose.yml 样本](https://github.com/HXSecurity/DongTai/blob/main/deploy/docker-compose/docker-compose.yml.example) 中的 `{ChangeThisVersion}` 替代成需要**升级**的`版本号`：
 	:::tip
 	* DongTai/deploy/latest_image.sh 可以查询到目前所有镜像最新的版本号。
 	
 	* 若宿住机的 port 有修正，请自行调配，预设为 `80`。
 	:::
-
-	```yml title="/DongTai/deploy/docker-compose/docker-compose.yml"
-	version: "2"
-	services:
-	  dongtai-redis:
-	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-redis:{ChangeThisVersion}"
-	    restart: always
-	    logging:
-	      driver: "json-file"
-	      options:
-	        max-size: "10m"
-	  dongtai-web:
-	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-web:{ChangeThisVersion}"
-	    restart: always
-	    ports:
-    	// highlight-next-line		
-	      - "80:80"
-	    volumes:
-	      - "./nginx.conf:/etc/nginx/nginx.conf"
-	    depends_on:
-	      - dongtai-server
-	    logging:
-	      driver: "json-file"
-	      options:
-	        max-size: "10m"
-
-	  dongtai-engine:
-	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{ChangeThisVersion}"
-	    restart: always
-	    entrypoint: ["/opt/dongtai/webapi/docker/entrypoint.sh", "worker"]
-	    volumes:
-	      - ./config-tutorial.ini:/opt/dongtai/webapi/conf/config.ini
-	    logging:
-	      driver: "json-file"
-	      options:
-	        max-size: "10m"
-	  dongtai-server:
-	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{ChangeThisVersion}"
-	    restart: always
-	    volumes:
-	      - ./config-tutorial.ini:/opt/dongtai/webapi/conf/config.ini
-	    logging:
-	      driver: "json-file"
-	      options:
-	        max-size: "10m"
-	  dongtai-engine-task:
-	    image: "registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{ChangeThisVersion}"
-	    restart: always
-	    entrypoint: ["/opt/dongtai/webapi/docker/entrypoint.sh", "beat"]
-	    volumes:
-	      - ./config-tutorial.ini:/opt/dongtai/webapi/conf/config.ini
-	    logging:
-	      driver: "json-file"
-	      options:
-	        max-size: "10m"
-	volumes:
-	  mysql-vol:
-	```	
 
 * 在同目录下执行下列命令：
 

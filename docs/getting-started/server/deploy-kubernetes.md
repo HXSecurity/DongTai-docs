@@ -37,6 +37,24 @@ import Highlight from '@site/src/components/Highlight';
 :::
 
 ### 部署
+:::tip ⚠️ 部署前，请添加 `存储类名称` 或 `pv 名称`；[4.deploy-iast-server.yml 样例](https://github.com/HXSecurity/DongTai/blob/main/deploy/kubernetes/manifest/4.deploy-iast-server.yml)
+
+参考资料：[K8S 储存类概念](https://kubernetes.io/zh-cn/docs/concepts/storage/storage-classes/)
+
+
+```bash title="DongTai/deploy/kubernetes/manifest/4.deploy-iast-server.yml"
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 2G
+  // highlight-next-line		  
+  storageClassName: #您的存储类名称
+  #volumeMode: Filesystem
+  #volumeName: 您的 pv 名称
+```
+:::
 
 ```bash
 # 克隆存储库
@@ -79,6 +97,12 @@ cd deploy/kubernetes
 	kubectl set image deploy dongtai-engine-task  dongtai-engine-task-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
 	kubectl set image deploy dongtai-server       dongtai-server-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
 	kubectl set image deploy dongtai-web          dongtai-web-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-web:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-worker-task       dongtai-worker-task-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-worker-beat       dongtai-worker-beat-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-worker-other      dongtai-worker-other-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-worker-high-freq  dongtai-worker-high-freq-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-logrotate         dongtai-logrotate-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/logrotate:{{ChangeThisVersion}} -n {{namespace}}
+	kubectl set image deploy dongtai-logstash          dongtai-logstash-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/logstash:7.9.2-{{ChangeThisVersion}} -n {{namespace}}
 	```
 
 
@@ -158,6 +182,17 @@ csrf_trust_origins = .example.com
 
 ### 部署
 
+:::tip ⚠️ 部署前，请添加 `存储类名称`；[values.yaml 样例](https://github.com/HXSecurity/DongTai/blob/main/deploy/kubernetes/helm/values.yaml)
+
+参考资料：[K8S 储存类概念](https://kubernetes.io/zh-cn/docs/concepts/storage/storage-classes/)
+
+```bash title="DongTai/deploy/kubernetes/helm/values.yaml"
+// highlight-next-line
+storageClassName:
+  name: 你的存储类名字
+```
+:::
+
 ```bash
 # 克隆存储库
 git clone https://github.com/HXSecurity/DongTai.git
@@ -171,6 +206,9 @@ helm repo update
 helm install --create-namespace -n dongtai  dongtai-iast dongtai/dongtai-iast
 ```
 这个命令将会在 `dongtai` 命名空间部署 Dongtai IAST Server , 并且使用 `ClusterIP` 方式暴露服务。
+
+
+
 
 ### 卸载
 
