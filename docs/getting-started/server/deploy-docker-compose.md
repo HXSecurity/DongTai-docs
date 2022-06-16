@@ -14,9 +14,13 @@ import Highlight from '@site/src/components/Highlight';
 
 * Docker
 
+* docker-compose
+
 :::tip
 
 可通过运行 `docker -v` 和 `docker-compose` 来检查查看当前机器是否已经安装。
+
+docker-compose 支持 v2.4 +，请自行至 [docker-compose 下载](https://github.com/docker/compose)。
 
 :::
 
