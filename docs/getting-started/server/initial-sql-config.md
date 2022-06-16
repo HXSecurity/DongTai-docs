@@ -30,7 +30,6 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-release-1.7.0-2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0-1.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0-2.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220608.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220616.sql
 
 # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
