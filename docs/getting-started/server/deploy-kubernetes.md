@@ -93,8 +93,6 @@ cd deploy/kubernetes
 
 	b. 编辑及执行各个 deployments 组件的镜像版本号:
 	```bash
-	kubectl set image deploy dongtai-engine     dongtai-engine-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
-	kubectl set image deploy dongtai-engine-task  dongtai-engine-task-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
 	kubectl set image deploy dongtai-server       dongtai-server-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
 	kubectl set image deploy dongtai-web          dongtai-web-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-web:{{ChangeThisVersion}} -n {{namespace}}
 	kubectl set image deploy dongtai-worker-task       dongtai-worker-task-container=registry.cn-beijing.aliyuncs.com/huoxian_pub/dongtai-server:{{ChangeThisVersion}} -n {{namespace}}
@@ -274,8 +272,8 @@ helm install --create-namespace -n dongtai-test --set accessType=NodePort --set 
 ```bash
 kubectl scale deployments ${deployment-names} --replicas=${number} -n ${your-namespace}
 
-#举例扩容 5 个 Engine：
-kubectl scale deployments dongtai-engine --replicas=5 -n your-namespace
+#举例扩容 5 个 dongtai-worker-task：
+kubectl scale deployments dongtai-worker-task --replicas=5 -n your-namespace
 ```
 
 也可配置自动水平扩容，指南：[Pod 水平自动扩缩](https://kubernetes.io/zh/docs/tasks/run-application/horizontal-pod-autoscale/)

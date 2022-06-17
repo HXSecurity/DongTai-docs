@@ -38,19 +38,11 @@ sidebar_position: 2
 
 :::
 
-### 基于 docker-compose 部署多个 OpenAPI 服务节点
+### 基于 docker-compose 部署多个服务节点
 
 :::note 答复
 
-  [请参考部署指南：自定义扩容 - OpenAPI](../getting-started/server/deploy-docker-compose#openapi-服务节点)
-
-:::
-
-### 基于 docker-compose 扩容多个 `dongtai-engine`
-
-:::note 答复
-
-  [请参考部署指南：自定义扩容 - Engine](../getting-started/server/deploy-docker-compose#engine-服务节点)
+  [请参考部署指南：自定义扩容 - OpenAPI](../getting-started/server/deploy-docker-compose#服务节点)
 
 :::
 
