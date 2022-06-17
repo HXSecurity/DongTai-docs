@@ -12,9 +12,9 @@ import Highlight from '@site/src/components/Highlight';
 
 * 8C16G
 
-* Docker
+* Docker: v20.x.x+
 
-* docker-compose
+* docker-compose: v2.4+
 
 :::tip
 
@@ -122,29 +122,17 @@ csrf_trust_origins = .example.com
 
 💡：**先使用 `./dtctl file` 导出 `docker-compose.yml`，再使用 `docker-compose` 执行扩容**
 
-#### OpenAPI 服务节点
+#### 服务节点
 
-  * 使用以下命令将 `OpenApi` 数量扩容到 `number`
+  * 使用以下命令将 `dongtai-image` 数量扩容到 `number`
 	  ```bash
-	  sudo docker-compose -p dongtai up –-scale dongtai-openapi=<number> -d
+	  sudo docker-compose -p dongtai up –-scale {dongtai-image}=<number> -d
 	  ```
 
-  * 例子：扩容 4 个 `dongtai-openapi`
+  * 例子：扩容 4 个 `dongtai-worker-task`
 	  ```bash
-	  sudo docker-compose -p dongtai up --scale dongtai-openapi=4 -d
+	  sudo docker-compose -p dongtai up --scale dongtai-worker-task=4 -d
 	  ```  
-
-#### Engine 服务节点
-
-  * 使用以下命令将 `Engine` 数量扩容到 `number`
-	  ```bash
-	  sudo docker-compose -p dongtai up –-scale dongtai-engine=<number> -d
-	  ```
-
-  * 例子：扩容 4 个 `dongtai-engine`
-	  ```bash
-	  sudo docker-compose -p dongtai up --scale dongtai-engine=4 -d
-	  ```
 :::
 
 
