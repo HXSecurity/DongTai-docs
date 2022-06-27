@@ -46,9 +46,33 @@ sidebar_position: 6
 
 	* 过滤方法规则 ： 属于传播节点的一种，用于添加公司内部自定义的危险数据过滤方法。
 
-	* 危险方法规则 ： 危险方法是漏洞出发的位置
+	* 危险方法规则 ： 危险方法是漏洞出发的位置。
 
 * 支持配置 Hook 深度（仅 Hook 当前类、仅 Hook 子类、 Hook 当前类及子类）
+
+#### 主动验证
+
+![Image](images/zh_replay_rule.png "")
+
+* 当点击漏洞主动验证 (有 HTTP 请求的中高危漏洞) 的时候，从下列数据库的表中，会出现至少一个或者N个 (N 为 漏洞类型配置的 payload 的 多少) 记录。
+
+``` sql
+SELECT * FROM iast_replay_queue irq
+WHERE relation_id = <漏洞id> order by id desc ; 
+```
+:::note 样例
+
+* 主动验证规则配置样例：
+
+![Image](images/zh_replay_rule_sample.png "")
+
+* 数据库 iast_replay_queue 表返回结果样例：
+
+![Image](images/zh_replay_result.png "")
+
+*提示：没有配置主动验证规则，`payload_id=-1`*
+
+:::
 
 ### 敏感信息配置
 
