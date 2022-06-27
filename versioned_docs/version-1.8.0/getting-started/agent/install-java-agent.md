@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 * 作业系统: Windows/Linux/Unix
 
-* JDK 版本: 1.8+
+* JDK 版本: 1.6+
 
 * Framework: Any
 

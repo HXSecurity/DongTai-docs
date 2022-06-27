@@ -59,7 +59,7 @@ import Highlight from '@site/src/components/Highlight';
 |:------------|:-----------------|
 |Java   |[Dubbo RPC](https://github.com/VulnerabilitySpace/dubbo-trace-example)、[OpenRASP 靶场](https://rasp.baidu.com/doc/install/testcase.html)、[OWASP Webgoat](https://owasp.org/www-project-webgoat)|  
 |Python |[DockerVulspace](https://github.com/jinghao1/DockerVulspace)|
-|PHP    |[Laravel-admin](https://github.com/z-song/laravel-admin)、[Laravel-shop](https://github.com/summerblue/laravel-shop)|
+|PHP    |[PHPVul](https://github.com/jinghao1/phpvul)|
 |Go     |[Dongtai-govwa](https://github.com/piexlmax/dongtai-govwa)|
 
 
