@@ -100,6 +100,8 @@ WHERE relation_id = <漏洞id> order by id desc ;
 
 * 状态监控用于监控 OpenAPI 和 Engine 状态、更新 Agent 和消息队列状态监控。
 
+* 启用配置定时清理数据功能。
+
 ## 操作日志
 
 ![Image](images/zh_dongtai_log.png "")
