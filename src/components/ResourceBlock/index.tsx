@@ -14,6 +14,15 @@ import clsx from 'clsx';
 
 const ResourceBlocks = [
   {
+    name: '📦 【洞态 IAST 出品】',
+    url: 'https://i0x0fy4ibf.feishu.cn/file/boxcn0YZQQeeBkBylPBG1EOzr8g',
+    description: (
+      <Translate id="ResourceBlock.password.description">
+        洞态进阶操作：使用配置 Elasticsearch 
+      </Translate>
+    ),
+  },
+  {
     name: '📦 【58安全实验室出品】',
     url: 'https://i0x0fy4ibf.feishu.cn/mindnotes/bmncnDFMx71BANnx7Qd406TjjLe',
     description: (
