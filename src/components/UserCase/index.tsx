@@ -36,7 +36,7 @@ const Usercases = [
     url: 'https://mp.weixin.qq.com/s/dRpVDlVHaonXNl1E4IRBNw',
     description: (
       <Translate id="Usercase.password.description">
-        解构开源IAST 打造好大夫安全灰盒利器
+        解构开源 IAST 打造好大夫安全灰盒利器
       </Translate>
     ),
   },
@@ -45,7 +45,7 @@ const Usercases = [
     url: 'https://mp.weixin.qq.com/s/NCLsECx5HCL8VMvqUkLUxQ',
     description: (
       <Translate id="Usercase.password.description">
-        洞态IAST在陌陌的应用
+        洞态 IAST 在陌陌的应用
       </Translate>
     ),
   },
@@ -54,7 +54,7 @@ const Usercases = [
     url: 'https://mp.weixin.qq.com/s/k1nBY5v3v66esL98hxkZNQ',
     description: (
       <Translate id="Usercase.password.description">
-        58集团与火线联合开发洞态应用场景高可用功能！
+        58 集团与火线联合开发洞态应用场景高可用功能！
       </Translate>
     ),
   }, 
@@ -90,7 +90,7 @@ const Usercases = [
     url: 'https://mp.weixin.qq.com/s/XN0zrVzYa-KQY2z6Wjbvgw',
     description: (
       <Translate id="Usercase.password.description">
-        洞态在聚水潭如何做到误报率几乎为0？
+        洞态在聚水潭如何做到误报率几乎为 0 ？
       </Translate>
     ),
   },             
