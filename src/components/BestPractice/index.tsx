@@ -49,6 +49,33 @@ const Bestpractices = [
       </Translate>
     ),
   },
+  {
+    name: '🏆 【58 集团】',
+    url: 'https://mp.weixin.qq.com/s/kvm8EJwOv-DXYlutRG9t7Q',
+    description: (
+      <Translate id="Bestpractice.wuxiong-02.description">
+        58 集团与火线联合开发洞态应用场景高可用功能！
+      </Translate>
+    ),
+  },
+  {
+    name: '🏆 【何纪新】',
+    url: 'https://mp.weixin.qq.com/s/eN9EfbxyVNDDBw65pg45OA',
+    description: (
+      <Translate id="Bestpractice.wuxiong-02.description">
+        洞态在陌陌的最佳落地实践
+      </Translate>
+    ),
+  },
+  {
+    name: '🏆 【陌度】',
+    url: 'https://mp.weixin.qq.com/s?__biz=MzU4MjEwNzMzMg==&mid=2247490614&idx=1&sn=563d155f980addcf9bb1916191bf17e0&source=41#wechat_redirect',
+    description: (
+      <Translate id="Bestpractice.wuxiong-02.description">
+        利用洞态做开源组件的安全治理
+      </Translate>
+    ),
+  },      
 ];
 
 interface Props {
