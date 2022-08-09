@@ -15,6 +15,15 @@ import clsx from 'clsx';
 const ResourceBlocks = [
   {
     name: '📦 【洞态 IAST 出品】',
+    url: 'https://i0x0fy4ibf.feishu.cn/docx/doxcnSoxZjm2nEMyT3KJwg6ej4e',
+    description: (
+      <Translate id="ResourceBlock.password.description">
+        洞态进阶操作：1.8.X API 文档 
+      </Translate>
+    ),
+  }, 
+  {
+    name: '📦 【洞态 IAST 出品】',
     url: 'https://i0x0fy4ibf.feishu.cn/file/boxcn0YZQQeeBkBylPBG1EOzr8g',
     description: (
       <Translate id="ResourceBlock.password.description">
