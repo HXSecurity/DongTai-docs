@@ -30,7 +30,8 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-release-1.7.0-2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0-1.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0-2.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220616.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2-1.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2-2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-1.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-2.sql
 
