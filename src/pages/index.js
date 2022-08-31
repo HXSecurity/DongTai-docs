@@ -27,12 +27,12 @@ const features = [
     ),
   },
   {
-    title: '操作手册',
+    title: '用户案例',
     imageUrl: 'img/index/operation.svg',
-    url:'docs/category/实践教学',
+    url:'docs/user-case',
     description: (
       <>
-      介绍洞态常见应用场景的操作实践
+      介绍洞态的用户案例
       </>
     ),
   },
