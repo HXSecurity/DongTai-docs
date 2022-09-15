@@ -1,7 +1,7 @@
 name: DEVOPS
 on:
   push:
-    branches: [ main ]
+    branches: [ devops-website ]
   workflow_dispatch:
 jobs:
   CICD:
