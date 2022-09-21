@@ -34,6 +34,8 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2-2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-1.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-2.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.4.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220914-release-1.8.5.sql
 
 # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
 cat *.sql | mysql -u<username> -h<url> -p --default-character-set=utf8mb4 dongtai_webapi
