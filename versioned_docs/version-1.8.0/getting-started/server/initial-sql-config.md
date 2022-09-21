@@ -34,6 +34,8 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2-2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-1.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-2.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.4.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220914-release-1.8.5.sql
 
 # 1.8.2以下，包括1.8.2需要执行下面sca-sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220616.sql
