@@ -18,3 +18,39 @@ sidebar_position: 3
 
 [🔗 : 系统配置 - 敏感信息配置](../operation/server-configuration#敏感信息配置)
 
+## 使用示例
+
+### 正则匹配
+
+此处的正则语法参照[🔗 :pyre官方文档](https://docs.python.org/3/library/re.html#regular-expression-syntax)
+
+
+以下是示例
+
+示例1：手机号检测
+
+
+![Image](/img/docs/tutorial/zh_sensitive-04.png "")
+
+### JSON字段解析
+
+
+此处的规则语法参照[🔗 :jq官网](https://stedolan.github.io/jq/manual/#Invokingjq)
+
+以下是示例
+
+示例1：检测json包含某个字段时
+
+
+![Image](/img/docs/tutorial/zh_sensitive-01.png"")
+
+2.遍历json中是否有符合正则的字符串
+
+
+![Image](/img/docs/tutorial/zh_sensitive-02.png "")
+
+
+3.遍历json中是否有携带id字段的object
+
+
+![Image](/img/docs/tutorial/zh_sensitive-03.png "")
