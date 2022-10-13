@@ -6,48 +6,50 @@ sidebar_position: 1
 
 ## 配置安装参数
 
-| 参数名  | 说明     | 类型  |可选参数   |预设值    |
-| :--------|:--------|:--------| :--------| :--------|
-| `dongtai.app.name`        | 设置项目名称 | String  |名称保证唯一   | Demo Project          |
-| `dongtai.app.version`     | 设置项目版本       | String      |应用版本号    | V1.0                  |
-| `dongtai.app.create`      | 设置是否自动创建项目   | Boolean    |`true` or `false`     | false                 |
-| `dongtai.debug`           | 开启后加载本地系统临时目录中的检测引擎  | Boolean   |`true` or `false`       | false                 |
-| `iast.server.mode`        | local模式支持、POST请求包展示、污点位置及污点值展示等功能 | String |`local` or `remote`|  local    |
-| `iast.engine.delay.time`  | 延迟启动功能，单位：秒                 | Integer   |任意整型数字      | 0                     |
-| `iast.dump.class.enable`  | 是否 dump 修改后的字节码             | Boolean |`true` or `false`           | false     |
-| `iast.dump.class.path`    | dump 字节码的路径                   | String|任意有权限路径          | /tmp/iast-class-dump/ |
-| `dongtai.server.url`      | Dongtai OpenAPI URL                  | String   | URL 格式      |  https://openapi.iast.io  |
-| `dongtai.server.token`    | Dongtai OpenAPI Token             | String  |        | User Token   |
-| `dongtai.response.length` | 向 Dongtai OpenAPI 发送的响应体长度     | Integer |大于 0 的整形数字        | null                  |
-| `dongtai.log`             | 是否把日志输出到本地文件               | Boolean  | `true` or `false`       | true                  |
-| `dongtai.log.path`        | 指定日志文件所在目录                   | String |任意有读写权限的目录         | agent.jar 当前目录    |
-| `dongtai.log.level`       | 指定日志等级                             | String    |`info`, `debug`      | info                  |
-| `dongtai.server.package`  | 指定是否从洞态Server端下载agent依赖包   | boolean    |`true`, `false`    | true                  |
-| `dongtai.cluster.name`    | 集群名称   | String    | URL 格式     |                |
-| `dongtai.cluster.version` | 集群版本   | String    | 集群版本号    |                  |
+| 参数名                          | 说明                         | 类型    | 可选参数                                  | 预设值                  |
+| :------------------------------ | :--------------------------- | :------ | :---------------------------------------- | :---------------------- |
+| `dongtai.app.create`            | 是否自动创建项目             | Boolean | `true`, `false`                           | false                   |
+| `dongtai.app.name`              | 项目名称                     | String  | 名称保证唯一                              | Demo Project            |
+| `dongtai.app.version`           | 项目版本                     | String  | 应用版本号                                | V1.0                    |
+| `dongtai.debug`                 | 开启后加载本地缓存的检测引擎 | Boolean | `true`, `false`                           | false                   |
+| `iast.engine.delay.time`        | 延迟启动功能，单位：秒       | Integer | 任意整型数字                              | 0                       |
+| `iast.dump.class.enable`        | 是否 dump 修改后的字节码     | Boolean | `true`, `false`                           | false                   |
+| `iast.dump.class.path`          | dump 字节码的路径            | String  | 任意有权限路径                            | /tmp/iast-class-dump/   |
+| `dongtai.server.url`            | Dongtai OpenAPI URL          | String  | URL 格式                                  | https://iast.io/openapi |
+| `dongtai.server.token`          | Dongtai OpenAPI Token        | String  |                                           |                         |
+| `dongtai.response.length`       | 向 OpenAPI 发送的响应体长度  | Integer | 大于 0 的整形数字                         |                         |
+| `dongtai.cluster.name`          | 集群名称                     | String  | 名称保证唯一                              |                         |
+| `dongtai.cluster.version`       | 集群版本                     | String  | 集群版本号                                |                         |
+| `dongtai.server.package`        | 设置是否从云端下载引擎       | boolean | `true`, `false`                           | true                    |
+| `dongtai.log`                   | 是否开启日志                 | Boolean | `true`, `false`                           | true                    |
+| `dongtai.log.level`             | 日志等级                     | String  | `error`, `warn`, `info`, `debug`, `trace` | info                    |
+| `dongtai.log.path`              | 日志文件所在目录             | String  | 任意有读写权限的目录                      |                         |
+| `dongtai.log.disable-collector` | 是否禁用日志采集             | Boolean | `true`, `false`                           | false                   |
 
 ## 热部署安装参数
 
-| 参数名             | 说明                                         | 类型      |可选参数 |   预设值               |
-| :--------|:--------|:--------| :--------| :--------|
-| `app_name`       | 设置项目名称                           | String     | 名称保证唯一   | Demo Project          |
-| `app_create`     | 设置是否自动创建项目                   | Boolean    | `true` or `false`     | false               |
-| `app_version`    | 设置项目版本                           | String     | 应用版本号    | V1.0                 |
-| `debug`          | 开启后加载本地系统临时目录中的检测引擎 | Boolean    |`true` or `false`       | false                 |
-| `dongtai_server` | Dongtai OpenAPI Url                    | String  | URL 格式      |                        |
-| `dongtai_token`  | Dongtai OpenAPI Token                  | String     |       |                      |
-| `mode`           | Agent 加载/卸载                        | String     | `install` or `uninstall` | |
-| `pid`            | 应用程序进程 ID                        | String     |                  |    |
-| `cluster_name`     | 设置集群名称                           | String       |名称保证唯一   |   |
-| `cluster_version` | 设置集群版本                           | String       |集群版本号  |   |
-| `server_package`   | 设置是否从云端下载引擎                 | String       | `true` or `false`     |   |
-| `log_level`        | 设置日志等级                           | String       |                      |   |
-| `log_path`         | 设置日志存放路径设置是否从云端下载引擎 | String | 任意有读写权限的目录    |   |
+| 参数名                  | 说明                         | 类型    | 可选参数                                  | 预设值                  |
+| :---------------------- | :--------------------------- | :------ | :---------------------------------------- | :---------------------- |
+| `mode`                  | Agent 加载/卸载, 必填        | String  | `install`, `uninstall`                    |                         |
+| `pid`                   | 应用程序进程 ID, 必填        | String  |                                           |                         |
+| `app_create`            | 是否自动创建项目             | Boolean | `true`, `false`                           | false                   |
+| `app_name`              | 项目名称                     | String  | 名称保证唯一                              | Demo Project            |
+| `app_version`           | 项目版本                     | String  | 应用版本号                                | V1.0                    |
+| `debug`                 | 开启后加载本地缓存的检测引擎 | Boolean | `true`, `false`                           | false                   |
+| `dongtai_server`        | Dongtai OpenAPI Url          | String  | URL 格式                                  | https://iast.io/openapi |
+| `dongtai_token`         | Dongtai OpenAPI Token        | String  |                                           |                         |
+| `cluster_name`          | 集群名称                     | String  | 名称保证唯一                              |                         |
+| `cluster_version`       | 集群版本                     | String  | 集群版本号                                |                         |
+| `server_package`        | 设置是否从云端下载引擎       | Boolean | `true`, `false`                           | true                    |
+| `log`                   | 是否开启日志                 | Boolean | `true`, `false`                           | true                    |
+| `log_level`             | 日志等级                     | String  | `error`, `warn`, `info`, `debug`, `trace` | info                    |
+| `log_path`              | 日志文件所在目录             | String  | 任意有读写权限的目录                      |                         |
+| `log_disable_collector` | 是否禁用日志采集             | Boolean | `true`, `false`                           | false                   |
 
 
 ## 用例
 
-:::info 
+:::info
 
 测试项目：SpringDemo
 
