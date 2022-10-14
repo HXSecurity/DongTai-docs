@@ -1,11 +1,14 @@
 ---
 sidebar_position: 2
+
+
 ---
 
 import Link from '@docusaurus/Link';
 import Highlight from '@site/src/components/Highlight';
 
 # Kubernetes
+
 ## 系统需求
 
 * Kubernetes version: 1.9+
@@ -14,20 +17,21 @@ import Highlight from '@site/src/components/Highlight';
 
 * 具备以下操作的授权,可以使用 `kubectl auth can-i` 验证:
 
-    * create secrets
+  * create secrets
 
-    * create deployments
+  * create deployments
 
-    * create configmaps
+  * create configmaps
 
-    * create namespaces
+  * create namespaces
 
-    * create StatefulSet
+  * create StatefulSet
 
-    * create Service
+  * create Service
 
 
 ## Helm 部署
+
 > 「Helm 部署」部分内置了demo数据库用于快速体验，升级版本的时候会出现数据丢失，生产环境请使用自维护的稳定数据库！
 
 :::tip
@@ -62,8 +66,10 @@ helm repo add dongtai https://charts.dongtai.io/iast
 helm repo update
 
 # 部署示例
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--set storage.persistentVolumeClaim=pvc
 ```
+
 这个命令将会在 `dongtai` 命名空间部署 Dongtai IAST Server , 并且使用 `ClusterIP` 方式暴露服务。
 
 
@@ -91,19 +97,24 @@ redis:
 ```
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --values /tmp/my-values.yaml
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--values /tmp/my-values.yaml
 ```
 
 * 也可以使用 `--set` 来覆盖单个值, 你可以使用 `--set` 将 ClusterIP 切换成 NodePort:
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc --set accessType=NodePort --set NodePort=30080
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--set storage.persistentVolumeClaim=pvc \
+--set accessType=NodePort --set NodePort=30080
 ```
 
 * 如果你需要修改 somaxconn (128) 
 
 ```
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc --set somaxconn=1024
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--set storage.persistentVolumeClaim=pvc \
+--set somaxconn=1024
 ```
 
 * Avaliable values:
@@ -123,7 +134,7 @@ helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --se
 
 * 首次登入 <Highlight color="#E3242B">必须</Highlight> 修改密码。
 
-	* 至 **`系统配置 > 密码修改`** 修改密码后再重新登入。
+  * 至 **`系统配置 > 密码修改`** 修改密码后再重新登入。
 
 :::
 
@@ -165,8 +176,6 @@ csrf_trust_origins = .example.com
 * 若有多个 HTTPS 域名进行绑定，域名间通过 "," 连接，如：`.example.com`, `.iast.io`, `.dongtai.io`
 
 :::
-
-
 
 
 
@@ -226,6 +235,5 @@ csrf_trust_origins = .example.com
 使用自定义数据库，请手动修改 `manifest/4.deploy-iast-server.yml` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
 
 :::
-
 
 

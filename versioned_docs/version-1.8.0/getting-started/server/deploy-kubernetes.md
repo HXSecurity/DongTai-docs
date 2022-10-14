@@ -65,7 +65,8 @@ helm repo add dongtai https://charts.dongtai.io/iast
 helm repo update
 
 # 部署示例
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--set storage.persistentVolumeClaim=pvc
 ```
 
 这个命令将会在 `dongtai` 命名空间部署 Dongtai IAST Server , 并且使用 `ClusterIP` 方式暴露服务。
@@ -95,19 +96,24 @@ redis:
 ```
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --values /tmp/my-values.yaml
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--values /tmp/my-values.yaml
 ```
 
 * 也可以使用 `--set` 来覆盖单个值, 你可以使用 `--set` 将 ClusterIP 切换成 NodePort:
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc --set accessType=NodePort --set NodePort=30080
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--set storage.persistentVolumeClaim=pvc \
+--set accessType=NodePort --set NodePort=30080
 ```
 
 * 如果你需要修改 somaxconn (128) 
 
 ```
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc --set somaxconn=1024
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+--set storage.persistentVolumeClaim=pvc \
+--set somaxconn=1024
 ```
 
 * Avaliable values:
