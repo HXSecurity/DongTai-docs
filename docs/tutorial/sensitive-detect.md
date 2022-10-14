@@ -42,7 +42,7 @@ sidebar_position: 3
 示例1：检测json包含某个字段时
 
 
-![Image](/img/docs/tutorial/zh_sensitive-01.png"")
+![Image](/img/docs/tutorial/zh_sensitive-01.png "")
 
 2.遍历json中是否有符合正则的字符串
 

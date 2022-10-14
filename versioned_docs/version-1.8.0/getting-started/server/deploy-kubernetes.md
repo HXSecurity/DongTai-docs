@@ -106,12 +106,11 @@ helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --se
 
 * 如果你需要修改 somaxconn (128) 
 
-  ```
-  helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc --set somaxconn=1024
-  ```
+```
+helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast --set storage.persistentVolumeClaim=pvc --set somaxconn=1024
+```
 
 * Avaliable values:
-
   * skipMysql: false (默认值), skipRedis: false (默认值)
 
   * accessType: ClusterIP(默认值), 可选项: `ClusterIP`, `NodePort`, `LoadBalancer`
