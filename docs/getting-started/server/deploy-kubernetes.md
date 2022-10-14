@@ -221,20 +221,4 @@ csrf_trust_origins = .example.com
 
 
 
-### 自定义配置
-
-:::note 数据库
-
-* m: 访问模式(mode)，可选: `NodePort LoadBalancer`, 默认为: NodePort
-
-* s: 跳过的资源(skip), 可选: `mysql redis mysql,redis`, 默认: don’t skip
-
-* n: 指定 `namespace`, 默认: dongtai
-
-
-使用自定义数据库，请手动修改 `manifest/4.deploy-iast-server.yml` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
-
-:::
-
-
 
