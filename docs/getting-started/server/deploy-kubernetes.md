@@ -66,7 +66,7 @@ helm repo add dongtai https://charts.dongtai.io/iast
 helm repo update
 
 # 部署示例
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --set storage.persistentVolumeClaim=pvc
 ```
 
@@ -97,14 +97,14 @@ redis:
 ```
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --values /tmp/my-values.yaml
 ```
 
 * 也可以使用 `--set` 来覆盖单个值, 你可以使用 `--set` 将 ClusterIP 切换成 NodePort:
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --set storage.persistentVolumeClaim=pvc \
 --set accessType=NodePort --set NodePort=30080
 ```
@@ -112,7 +112,7 @@ helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
 * 如果你需要修改 somaxconn (128) 
 
 ```
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --set storage.persistentVolumeClaim=pvc \
 --set somaxconn=1024
 ```
@@ -141,7 +141,7 @@ helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
 ### 卸载
 
 ```
-helm uninstall ProjectName -n dongtai
+helm uninstall project -n dongtai
 ```
 
 
@@ -235,5 +235,6 @@ csrf_trust_origins = .example.com
 使用自定义数据库，请手动修改 `manifest/4.deploy-iast-server.yml` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
 
 :::
+
 
 

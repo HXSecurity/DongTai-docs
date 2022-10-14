@@ -65,7 +65,7 @@ helm repo add dongtai https://charts.dongtai.io/iast
 helm repo update
 
 # 部署示例
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --set storage.persistentVolumeClaim=pvc
 ```
 
@@ -96,14 +96,14 @@ redis:
 ```
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --values /tmp/my-values.yaml
 ```
 
 * 也可以使用 `--set` 来覆盖单个值, 你可以使用 `--set` 将 ClusterIP 切换成 NodePort:
 
 ```bash
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --set storage.persistentVolumeClaim=pvc \
 --set accessType=NodePort --set NodePort=30080
 ```
@@ -111,7 +111,7 @@ helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
 * 如果你需要修改 somaxconn (128) 
 
 ```
-helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
+helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 --set storage.persistentVolumeClaim=pvc \
 --set somaxconn=1024
 ```
@@ -140,7 +140,7 @@ helm install ProjectName --create-namespace -n dongtai dongtai/dongtai-iast \
 ### 卸载
 
 ```
-helm uninstall ProjectName -n dongtai
+helm uninstall project -n dongtai
 ```
 
 
