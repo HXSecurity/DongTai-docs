@@ -4,9 +4,12 @@ sidebar_position: 5
 
 # Go Agent
 
-:::tip
+:::caution
+该Agent目前主要有社区维护，当前为beta版本，可能存在无法部署成功等问题。
+
 [靶场参考](../../introduction/detection#测试靶场)
 :::
+
 
 ## 安装环境
 
@@ -24,13 +27,13 @@ sidebar_position: 5
 1. 将下载的 `dongtai-go-agent-config.yaml` 放置到项目根目录
 
 	:::info离线部署配置
-	在 go.mod 文件中添加 `replace github.com/HXSecurity/DongTai-agent-go => 本地洞态路径` 
+	在 go.mod 文件中添加 `replace github.com/HXSecurity/DongTai-agent-go => 本地洞态路径`
 	:::
 
 2. 在项目入口文件引入基础包 `_ "github.com/HXSecurity/DongTai-agent-go/run/base"`
 
 3. 在项目入口文件引入框架包 例：`_ "github.com/HXSecurity/DongTai-agent-go/run/gin"`
-	
+
 	:::info 目前支持的框架包
 	* gorm: _ "github.com/HXSecurity/DongTai-agent-go/run/gorm"
 	* http: _ "github.com/HXSecurity/DongTai-agent-go/run/http"
@@ -52,7 +55,7 @@ sidebar_position: 5
 
 可在命令行添加参数来配置自动创建项目、项目名称、项目版本号等。
 
-* `DongtaiGoProjectName=true` 为可选参数，将自动创建项目。 
+* `DongtaiGoProjectName=true` 为可选参数，将自动创建项目。
 * `DongtaiGoProjectName=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
 * `DongtaiGoProjectVersion=<application version>` 为可选参数，会自动创建项目版本。
 

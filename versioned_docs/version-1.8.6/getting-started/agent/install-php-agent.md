@@ -4,7 +4,9 @@ sidebar_position: 4
 
 # PHP Agent
 
-:::tip
+:::caution
+该Agent目前主要有社区维护，当前为beta版本，可能存在无法部署成功等问题。
+
 [靶场参考](../../introduction/detection#测试靶场)
 :::
 
@@ -19,7 +21,7 @@ sidebar_position: 4
 2.  复制 `dongtai_php_agent.so` 到 PHP 安装环境中的 extension 中。
 
 	:::tip
-	
+
 	`policy.json` 的路径可以在 `dongtai-php-property.ini` 中修改 `hook.json.path` 对应的路径，默认为: `/var/www/php-agent/policy.json`。
 
 	:::
@@ -45,7 +47,7 @@ sidebar_position: 4
 
 可通过配置文件 `dongtai_agent_php.ini` 自动创建项目、项目名称、项目版本号等。
 
-* `dongtai.project.auto_create=1` 为可选参数，将自动创建项目。 
+* `dongtai.project.auto_create=1` 为可选参数，将自动创建项目。
 * `dongtai.project.name=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
 * `dongtai.project.version=<application version>` 为可选参数，会自动创建项目版本。
 

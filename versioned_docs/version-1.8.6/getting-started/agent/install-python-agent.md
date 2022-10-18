@@ -2,9 +2,11 @@
 sidebar_position: 3
 ---
 
-# Python Agent
+# Python Agent(Beta)
 
-:::tip
+:::caution
+该Agent目前主要有社区维护，当前为beta版本，可能存在无法部署成功等问题。
+
 [靶场参考](../../introduction/detection#测试靶场)
 :::
 
@@ -46,7 +48,7 @@ sidebar_position: 3
 
 * [下载 Agent 压缩文件](download-agent)并执行以下命令：
 
-	```bash 
+	```bash
 	pip3 install ./dongtai-agent-python.tar.gz
 	```
 
@@ -57,10 +59,10 @@ sidebar_position: 3
 * 修改 Django 项目中的 `settings.py`，在 `MIDDLEWARE` 中增加下列配置：
 
 	```bash title="settings.py"
-	MIDDLEWARE = [ 
+	MIDDLEWARE = [
 	    'dongtai_agent_python.middlewares.django_middleware.FireMiddleware',
 	    #...
-	 ]  
+	 ]
 	```
 
 ### Flask
@@ -81,7 +83,7 @@ sidebar_position: 3
 
 可通过配置文件 `config.js` 或环境变量配置自动创建项目、项目名称、项目版本号等。
 
-* `AUTO_CREATE_PROJECT=1` 为可选参数，将自动创建项目。 
+* `AUTO_CREATE_PROJECT=1` 为可选参数，将自动创建项目。
 * `PROJECT_NAME=<application name>` 为可选参数， `<application name>` 与创建的项目名称保持一致，将自动关联至项目；默认值为 `Demo Project`。
 * `PROJECT_VERSION=<application version>` 为可选参数，会自动创建项目版本。
 
