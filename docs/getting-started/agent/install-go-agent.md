@@ -2,7 +2,11 @@
 sidebar_position: 5
 ---
 
-# Go Agent
+# Go Agent（beta）
+
+:::tip
+Go agent当前主要由社区维护，beta版本无法保证成功部署。
+:::
 
 :::tip
 [靶场参考](../../introduction/detection#测试靶场)

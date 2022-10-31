@@ -2,7 +2,11 @@
 sidebar_position: 3
 ---
 
-# Python Agent
+# Python Agent（beta）
+
+:::tip
+Python agent当前主要由社区维护，beta版本无法保证成功部署。
+:::
 
 :::tip
 [靶场参考](../../introduction/detection#测试靶场)

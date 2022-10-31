@@ -48,9 +48,9 @@ sidebar_position: 1
 :::note Agent 安装指南
 
   * [Java Agent](agent/install-java-agent)
-  * [Python Agent](agent/install-python-agent)
-  * [PHP Agent](agent/install-php-agent)
-  * [Go Agent](agent/install-go-agent)
+  * [Python Agent(beta)](agent/install-python-agent)
+  * [PHP Agent(beta)](agent/install-php-agent)
+  * [Go Agent(beta)](agent/install-go-agent)
 
 
   <b>同时支持开发环境插件</b>
