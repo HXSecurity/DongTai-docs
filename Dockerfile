@@ -1,12 +1,8 @@
+FROM node:16
+WORKDIR /doc/
+COPY . .
+RUN yarn && yarn build
+COPY --from=0 /gva_web/dist /usr/share/nginx/html
 FROM nginx
-COPY ./build /usr/share/nginx/html
+COPY --from=0 /doc/build /usr/share/nginx/html
 EXPOSE 80
-# FROM node:latest
-
-# COPY  .  /opt 
-
-# WORKDIR /opt
-
-# RUN yarn && yarn build
-
-# CMD ["yarn","run","serve"]
