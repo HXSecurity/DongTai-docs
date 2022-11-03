@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dongtai-doc-v3
+  namespace: dongtai
+  annotations:
+    kubesphere.io/description: dongtai-doc-v3
+  labels:
+    app: dongtai-doc-v3
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dongtai-doc-v3
+  template:
+    metadata:
+      labels:
+        app: dongtai-doc-v3
+        version: v1
+    spec:
+      containers:
+        - name: dongtai-doc-v3-container
+          image: dongtai/dongtai-doc-v3:VERSION
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "500m"
+              memory: 1000Mi
+            requests:
+              cpu: "500m"
+              memory: 1000Mi
+     

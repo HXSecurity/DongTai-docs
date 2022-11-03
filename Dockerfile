@@ -1,9 +1,12 @@
-FROM node:latest
+FROM nginx
+COPY ./build /usr/share/nginx/html
+EXPOSE 80
+# FROM node:latest
 
-COPY  .  /opt 
+# COPY  .  /opt 
 
-WORKDIR /opt
+# WORKDIR /opt
 
-RUN yarn && yarn build
+# RUN yarn && yarn build
 
-CMD ["yarn","run","serve"]
+# CMD ["yarn","run","serve"]
