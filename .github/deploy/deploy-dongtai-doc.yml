@@ -15,6 +15,8 @@ spec:
       app: dongtai-doc-v3
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/inject: "true"
       labels:
         app: dongtai-doc-v3
         version: v1
