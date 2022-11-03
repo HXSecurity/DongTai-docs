@@ -9,7 +9,7 @@ metadata:
     app: dongtai-doc-v3
     version: v1
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: dongtai-doc-v3
@@ -28,8 +28,8 @@ spec:
           resources:
             limits:
               cpu: "500m"
-              memory: 1000Mi
+              memory: 500Mi
             requests:
               cpu: "500m"
-              memory: 1000Mi
+              memory: 500Mi
      
