@@ -46,20 +46,20 @@ import Highlight from '@site/src/components/Highlight';
 
 参考资料：[K8S 储存类概念](https://kubernetes.io/zh-cn/docs/concepts/storage/storage-classes/)
 
-需要准备一个 `storageclass`, 或者一个可公共写的 `pvc` 
+需要准备一个 `storageclass`, 或者一个可公共写的 `pvc` ,下面参数三选一即可。
 
 ```
 --set storage.storageClassName=storageclass
 or
---set storage.persistentVolumeClaim=pvc
+--set storage.persistentVolumeClaim=pvc （默认会启用）
+
+或者不使用存储类，会影响部分功能使用，如（agent日志页面收集）
+--set storage.persistentVolumeClaim=null
 ```
 
 :::
 
 ```bash
-# 克隆存储库
-git clone https://github.com/HXSecurity/DongTai.git
-cd deploy/kubernetes/helm
 
 # 添加、更新仓库
 helm repo add dongtai https://charts.dongtai.io/iast
@@ -67,7 +67,7 @@ helm repo update
 
 # 部署示例
 helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
---set storage.persistentVolumeClaim=pvc
+--set storage.persistentVolumeClaim=null
 ```
 
 这个命令将会在 `dongtai` 命名空间部署 Dongtai IAST Server , 并且使用 `ClusterIP` 方式暴露服务。
@@ -82,6 +82,7 @@ helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 * 使用自定义数据库，请手动修改 `/tmp/my-values.yml` 文件内的 `mysql` 和 `redis` 配置后再参照[初始化自定义数据库](initial-sql-config)。
 
 ```yml title="/tmp/my-values.yml"
+skipMysql: true
 mysql:
   host: my-dongtai-mysql
   port: 3306
@@ -89,6 +90,7 @@ mysql:
   user: root
   password: my-dongtai-iast
 
+skipRedis: true
 redis:
   host: my-dongtai-redis
   port: 6379
@@ -105,7 +107,7 @@ helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 
 ```bash
 helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
---set storage.persistentVolumeClaim=pvc \
+--set storage.persistentVolumeClaim=null \
 --set accessType=NodePort --set NodePort=30080
 ```
 
@@ -113,7 +115,7 @@ helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
 
 ```
 helm install project --create-namespace -n dongtai dongtai/dongtai-iast \
---set storage.persistentVolumeClaim=pvc \
+--set storage.persistentVolumeClaim=null \
 --set somaxconn=1024
 ```
 
