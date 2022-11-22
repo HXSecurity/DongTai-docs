@@ -23,6 +23,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'HXSecurity', // Usually your GitHub org/user name.
   projectName: 'DongTai-docs-docusaurus', // Usually your repo name.
+  trailingSlash: true,
 
   presets: [
     [
