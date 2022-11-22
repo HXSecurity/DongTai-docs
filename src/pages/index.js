@@ -55,9 +55,9 @@ const features2 = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     url:'docs/introduction',
     links:[
-      {label:"📙 洞态 IAST 和 百度 OpenRASP-IAST 的区别",url:"docs/get-help/faq-dongtai#洞态-iast-和-百度-openrasp-iast-的区别"},
+      {label:"📙 洞态 IAST 和 百度 OpenRASP-IAST 的区别",url:"docs/get-help/faq-dongtai"},
       {label:"📙 洞态 IAST 漏洞覆盖",url:"docs/introduction/detection"},
-      {label:"📙 部署洞态 Server 相关问题",url:"docs/get-help/faq-server/"},
+      {label:"📙 部署洞态 Server 相关问题",url:"docs/get-help/faq-server"},
       {label:"📙 安装洞态 Agent 相关问题",url:"docs/get-help/faq-agent/faq-agent-install"},
       {label:"📙 洞态漏洞检测相关问题",url:"docs/get-help/faq-detect"},
       {label:"📙 联系我们",url:"docs/get-help/contact-us"},
