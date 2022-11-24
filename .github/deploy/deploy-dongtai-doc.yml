@@ -17,7 +17,7 @@ spec:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
-        sidecar.istio.io/interceptionMode: "TPROXY"
+        # sidecar.istio.io/interceptionMode: "TPROXY"
       labels:
         app: dongtai-doc-v3
         version: v1
