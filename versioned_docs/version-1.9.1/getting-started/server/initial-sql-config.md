@@ -6,8 +6,6 @@ sidebar_position: 3
 ```bash
 # 下载数据库文件
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/db.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/rule.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210731-release-1.0.0.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210817-release-1.0.2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20210831-release-1.0.3.sql
@@ -25,20 +23,16 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220218-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220316-release-1.4.0.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220407-release-1.5.0.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220407-release-1.6.0.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-release-1.7.0-0.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-release-1.7.0-1.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-release-1.7.0-2.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0-1.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0-2.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2-1.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2-2.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-1.sql
-wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3-2.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220515-release-1.7.0.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.0.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220607-release-1.8.2.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.3.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220805-release-1.8.4.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220914-release-1.8.5.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220928-release-1.8.6.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221024-release-1.8.7.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221024-release-1.9.0.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221126-release-1.9.1.sql
 
 
 # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
@@ -58,12 +52,6 @@ docker exec -i $(docker_mysql_id) /bin/bash -c "mysql -uroot -pdongtai-iast --de
 
 ```bash
 docker exec -it dongtai-dongtai-server-1 bash -c 'python manage.py update'
-```
-
- 1.8.7 以后版本更新规则命令（可多次执行）
-
-```bash
-docker exec -it dongtai-dongtai-server-1 bash -c 'python manage.py load_hook_strategy'
 ```
 
 :::
