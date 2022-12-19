@@ -33,6 +33,7 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20220928-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221024-release-1.8.7.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221024-release-1.9.0.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221126-release-1.9.1.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221216-release-1.9.2.sql
 
 
 # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
