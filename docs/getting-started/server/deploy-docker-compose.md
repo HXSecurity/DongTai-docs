@@ -34,10 +34,16 @@ Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !*
 :::
 
 
-* 克隆存储库
+* 克隆存储库(github)
 
 	```bash
 	git clone https://github.com/HXSecurity/DongTai.git
+	```
+
+* 克隆存储库(gitee)
+
+	```bash
+	git clone https://gitee.com/HXSecurity/DongTai.git
 	```
 
 * 更新代码
