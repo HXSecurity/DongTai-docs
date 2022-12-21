@@ -68,6 +68,10 @@ Docker Compose 方式部署仅供快速体验，**请不要用于生产环境 !*
 	# 举例 1.8.0 版, <version> = 1.8.0
 	./dtctl install -v <version>
 	```
+	```bash
+	# 部署arm版本请使用dockerhub镜像，同时需要使用自定义数据库
+	./dtctl install -r dockerhub
+	```
 
 ## 自定义配置
 
