@@ -72,16 +72,20 @@ const features2 = [
     title: '更新发布',
     imageUrl: 'img/index/news.svg',
     url:'docs/changelog/release-note',
+    links:[
+      {label:"Java-Sec-code靶场测试报告",url:"https://i0x0fy4ibf.feishu.cn/docx/Vrs1d5emZoNQkNxO0Evc13htnIk"},
+    ],
     description: (
       <>
-        取得新功能、更新和错误修复信息
+        
       </>
     ),
+    
   },
 ];
 
 
-function Feature({imageUrl, title, description,url,links}) {
+function Feature({imageUrl, title, description,url}) {
   const imgUrl = useBaseUrl(imageUrl);
   const href = useBaseUrl(url)
   return (
@@ -95,6 +99,25 @@ function Feature({imageUrl, title, description,url,links}) {
       )}
       <h3 style={{fontWeight: 450}}>{title}</h3>
       <p>{description}</p>
+    </div>
+  );
+}
+
+function Feature3({imageUrl, title, description,url,links}) {
+  const imgUrl = useBaseUrl(imageUrl);
+  const href = useBaseUrl(url)
+  return (
+    <div className={clsx('col col--4', styles.Cardbox)}>
+      {imgUrl && (
+        <div>
+          <img className={styles.featureImage} src={imgUrl} alt={title} />
+        </div>
+      )}
+      <h3 style={{fontWeight: 450}}>{title}</h3>
+      <a href="https://doc.dongtai.io/docs/changelog/release-note" target="_self">取得新功能、更新和错误修复信息</a> 
+
+      <p>{description}</p>
+      <a href="https://i0x0fy4ibf.feishu.cn/docx/Vrs1d5emZoNQkNxO0Evc13htnIk" target="_self">Java-Sec-code靶场测试报告</a> 
     </div>
   );
 }
@@ -146,6 +169,7 @@ export default function Home() {
                     key={title}
                     title={title}
                     imageUrl={imageUrl}
+                    links={features2[1].links}
                     description={description}
                   />
                 ))}
@@ -162,11 +186,12 @@ export default function Home() {
                   />
 
 
-                  <Feature
+                  <Feature3
                     url={features2[1].url}
                     key={features2[1].title}
                     title={features2[1].title}
                     imageUrl={features2[1].imageUrl}
+                    links={features2[1].links}
                     description={features2[1].description}
                   />
               </div>
