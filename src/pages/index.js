@@ -103,7 +103,7 @@ function Feature({imageUrl, title, description,url}) {
   );
 }
 
-function Feature3({imageUrl, title, description,url,links}) {
+function Feature3({imageUrl, title, description,url}) {
   const imgUrl = useBaseUrl(imageUrl);
   const href = useBaseUrl(url)
   return (
