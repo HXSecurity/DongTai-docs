@@ -35,6 +35,7 @@ wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221024-r
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221126-release-1.9.1.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20221216-release-1.9.2.sql
 wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20230213-release-1.9.3.sql
+wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/update-20230319-release-1.10.0.sql.sql
 
 
 # 执行导入命令，输入数据库密码，完成刚刚下载的数据导入
@@ -49,11 +50,4 @@ cat *.sql | mysql -u<username> -h<url> -p --default-character-set=utf8mb4 dongta
 docker exec -i $(docker_mysql_id) /bin/bash -c "mysql -uroot -pdongtai-iast --default-character-set=utf8mb4 dongtai_webapi " <
 *.sql
 ```
-
- 1.8.0 版本更新需要执行下面命令刷新旧数据
-
-```bash
-docker exec -it dongtai-dongtai-server-1 bash -c 'python manage.py update'
-```
-
 :::
