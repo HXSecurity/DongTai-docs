@@ -10,14 +10,14 @@ sidebar_position: 1
 ## 1. 部署 DongTai IAST Server 
 
   ```
-  选择本地部署或注册 SaaS 服务。
+  选择部署方式。
   ```
 
 :::note Server 部署或注册方案
 
   * [Docker Compose](server/deploy-docker-compose)
   * [Kubernetes](server/deploy-kubernetes)
-  * [注册 SaaS 服务](https://jinshuju.net/f/I9PNmf) 
+ 
 
 :::
 
