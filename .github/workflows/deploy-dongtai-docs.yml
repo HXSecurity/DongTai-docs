@@ -1,10 +1,10 @@
 name: Deploy Dongtai Docs
 
 on:
-  release:
-    types: ["created"]
+  # release:
+  #   types: ["created"]
   push:
-    branches: ["main"]
+    branches: ["stop"]
 
 jobs:
   deploy-docs:
