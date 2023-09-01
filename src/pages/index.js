@@ -46,6 +46,36 @@ const features = [
       </>
     ),
   },
+  {
+    title: 'API',
+    imageUrl: 'img/index/api.svg',
+    url:'docs/api/openapi/openapi-agent-develop',
+    description: (
+      <>
+       洞态api的使用简介
+      </>
+    ),
+  },
+  {
+    title: '开发者文档',
+    imageUrl: 'img/index/wendang.svg',
+    url:'docs/development/dongtai-java-agent-doc/',
+    description: (
+      <>
+       这是 Dongtai-Java-Agent 的官方文档，在这里你将了解到关于 Dongtai-Java-Agent 的相关介绍
+      </>
+    ),
+  },
+  {
+    title: '更新日志',
+    imageUrl: 'img/index/rizhi.svg',
+    url:'docs/changelog/release-note',
+    description: (
+      <>
+       洞态发版通知
+      </>
+    ),
+  },
 ];
 
 
