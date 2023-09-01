@@ -97,10 +97,10 @@ const config = {
             label: '更新日志',
           },                
           // Please keep GitHub link to the right for consistency.
-          {
-            type: 'docsVersionDropdown',
-            position: 'right',
-          },        
+          // {
+          //   type: 'docsVersionDropdown',
+          //   position: 'right',
+          // },        
           {
             type: 'localeDropdown',
             position: 'right',            

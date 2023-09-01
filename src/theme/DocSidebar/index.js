@@ -19,6 +19,8 @@ import IconArrow from '@theme/IconArrow';
 import {translate} from '@docusaurus/Translate';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import styles from './styles.module.css';
+import SelectNav from '@site/src/components/SelectNav';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function useShowAnnouncementBar() {
   const {isActive} = useAnnouncementBar();
@@ -64,13 +66,16 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
     navbar: {hideOnScroll},
     hideableSidebar,
   } = useThemeConfig();
+  const { globalData } = useDocusaurusContext();
+  const { versions } = globalData['docusaurus-plugin-content-docs'].default
   return (
     <div
-      className={clsx(styles.sidebar, {
+      className={clsx('sidebar-self', styles.sidebar, {
         [styles.sidebarWithHideableNavbar]: hideOnScroll,
         [styles.sidebarHidden]: isHidden,
       })}>
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
+      <SelectNav items={versions} label="Select Software Version" />
       <nav
         className={clsx('menu thin-scrollbar', styles.menu, {
           [styles.menuWithAnnouncementBar]: showAnnouncementBar,
