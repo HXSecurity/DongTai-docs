@@ -82,7 +82,8 @@ const sidebars = {
               dirName: 'getting-started/agent',
             },
           ],
-        },        
+        },
+        'getting-started/start-xjpc',     
       ],      
     },
     {
