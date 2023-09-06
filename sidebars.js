@@ -83,8 +83,9 @@ const sidebars = {
             },
           ],
         },
-        'getting-started/start-xjpc',     
-      ],      
+        'getting-started/start-xjpc',
+        'getting-started/start-shangye',
+      ],
     },
     {
       type: 'category',
