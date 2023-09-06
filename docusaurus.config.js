@@ -42,7 +42,7 @@ const config = {
           includeCurrentVersion: true,
         },
         theme: {
-          customCss: require.resolve('./src/css/custom1.css'),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
