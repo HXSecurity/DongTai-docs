@@ -6,10 +6,11 @@ import versionsList from '@site/versions.json'
 export default function SelectNav({ label, items }) {
   let history = useHistory();
   let pathname = useLocation().pathname;
-  let cur = pathname.replace('/docs/', '').split('/')[0]
+  let dongtai = pathname.startsWith('/doc/')
+  let cur = pathname.replace(dongtai ? '/doc/docs/' : '/docs/', '').split('/')[0]
   let flag = cur === 'next' || versionsList.includes(cur)
-  let pagePath = flag ? pathname.replace(`/docs/${cur}`, '') : pathname.replace('/docs', '')
-  // console.log('----', pathname.replace('/docs/', '').split('/')[0], flag, pagePath)
+  let pagePath = flag ? pathname.replace(dongtai ? `/doc/docs/${cur}` : `/docs/${cur}`, '') : pathname.replace(dongtai ? '/doc/docs' : '/docs', '')
+  console.log('----', pathname, pagePath)
   const [selectedOption, setSelectedOption] = flag ? useState(cur === 'next' ? 'Next' : cur) : useState(items[1].label);
   const [showDropdown, setShowDropdown] = useState(false);
 

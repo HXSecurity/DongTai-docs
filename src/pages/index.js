@@ -20,61 +20,37 @@ const features = [
     title: '快速开始',
     imageUrl: 'img/index/getting-started.svg',
     url:'docs/category/快速开始',
-    description: (
-      <>
-      快速部署洞态，开始您的互动式安全检测项目
-      </>
-    ),
+    description: '快速部署洞态，开始您的互动式安全检测项目',
   },
   {
     title: '用户案例',
     imageUrl: 'img/index/operation.svg',
     url:'docs/user-case',
-    description: (
-      <>
-      介绍洞态的用户案例
-      </>
-    ),
+    description: '介绍洞态的用户案例',
   },
   {
     title: '最佳实践',
     imageUrl: 'img/index/star.svg',
     url:'docs/best-practice-case',
-    description: (
-      <>
-      洞态在 DevSecOps 中的最佳实践
-      </>
-    ),
+    description: '洞态在 DevSecOps 中的最佳实践',
   },
   {
     title: 'API',
     imageUrl: 'img/index/api.svg',
-    url:'docs/api/openapi/openapi-agent-develop',
-    description: (
-      <>
-       洞态api的使用简介
-      </>
-    ),
+    url:'docs/api/openapi/openapi-agent-develop/',
+    description: '洞态api的使用简介',
   },
   {
     title: '开发者文档',
     imageUrl: 'img/index/wendang.svg',
     url:'docs/development/dongtai-java-agent-doc/',
-    description: (
-      <>
-       这是 Dongtai-Java-Agent 的官方文档，在这里你将了解到关于 Dongtai-Java-Agent 的相关介绍
-      </>
-    ),
+    description: '这是 Dongtai-Java-Agent 的官方文档，在这里你将了解到关于 Dongtai-Java-Agent 的相关介绍',
   },
   {
     title: '更新日志',
     imageUrl: 'img/index/rizhi.svg',
     url:'docs/changelog/release-note',
-    description: (
-      <>
-       洞态发版通知
-      </>
-    ),
+    description: '洞态发版通知'
   },
 ];
 
@@ -92,10 +68,7 @@ const features2 = [
       {label:"📙 洞态漏洞检测相关问题",url:"docs/get-help/faq-detect"},
       {label:"📙 联系我们",url:"docs/get-help/contact-us"},
     ],
-    description: (
-      <>
-      </>
-    ),
+    description: '',
   },
   
   {
@@ -105,11 +78,7 @@ const features2 = [
     links:[
       {label:"Java-Sec-code靶场测试报告",url:"https://i0x0fy4ibf.feishu.cn/docx/Vrs1d5emZoNQkNxO0Evc13htnIk"},
     ],
-    description: (
-      <>
-        
-      </>
-    ),
+    description: '',
     
   },
 ];
