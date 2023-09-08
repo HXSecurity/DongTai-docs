@@ -19,19 +19,19 @@ const features = [
   {
     title: '快速开始',
     imageUrl: 'img/index/getting-started.svg',
-    url:'docs/category/快速开始',
+    url:'docs/category/快速开始/',
     description: '快速部署洞态，开始您的互动式安全检测项目',
   },
   {
     title: '用户案例',
     imageUrl: 'img/index/operation.svg',
-    url:'docs/user-case',
+    url:'docs/user-case/',
     description: '介绍洞态的用户案例',
   },
   {
     title: '最佳实践',
     imageUrl: 'img/index/star.svg',
-    url:'docs/best-practice-case',
+    url:'docs/best-practice-case/',
     description: '洞态在 DevSecOps 中的最佳实践',
   },
   {
@@ -49,7 +49,7 @@ const features = [
   {
     title: '更新日志',
     imageUrl: 'img/index/rizhi.svg',
-    url:'docs/changelog/release-note',
+    url:'docs/changelog/release-note/',
     description: '洞态发版通知'
   },
 ];
