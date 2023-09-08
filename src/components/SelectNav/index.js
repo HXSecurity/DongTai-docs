@@ -7,9 +7,9 @@ export default function SelectNav({ label, items }) {
   let history = useHistory();
   let pathname = useLocation().pathname;
   let dongtai = pathname.startsWith('/doc/')
-  let cur = pathname.replace(dongtai ? '/doc/docs/' : '/docs/', '').split('/')[0]
+  let cur = pathname.replace(dongtai ? '/dongtai_doc/' : '/docs/', '').split('/')[0]
   let flag = cur === 'next' || versionsList.includes(cur)
-  let pagePath = flag ? pathname.replace(dongtai ? `/doc/docs/${cur}` : `/docs/${cur}`, '') : pathname.replace(dongtai ? '/doc/docs' : '/docs', '')
+  let pagePath = flag ? pathname.replace(dongtai ? `/dongtai_doc/${cur}` : `/docs/${cur}`, '') : pathname.replace(dongtai ? '/dongtai_doc' : '/docs', '')
   console.log('----', pathname, pagePath)
   const [selectedOption, setSelectedOption] = flag ? useState(cur === 'next' ? 'Next' : cur) : useState(items[1].label);
   const [showDropdown, setShowDropdown] = useState(false);

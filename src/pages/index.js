@@ -115,8 +115,8 @@ function Feature3({imageUrl, title, description,url}) {
       <h3 style={{fontWeight: 450}}>{title}</h3>
       <a href="https://doc.dongtai.io/docs/changelog/release-note" target="_self">取得新功能、更新和错误修复信息</a> 
 
-      <p>{description}</p>
-      <a href="https://i0x0fy4ibf.feishu.cn/docx/Vrs1d5emZoNQkNxO0Evc13htnIk" target="_self">Java-Sec-code靶场测试报告</a> 
+      {/* <p>{description}</p>
+      <a href="https://i0x0fy4ibf.feishu.cn/docx/Vrs1d5emZoNQkNxO0Evc13htnIk" target="_self">Java-Sec-code靶场测试报告</a>  */}
     </div>
   );
 }
