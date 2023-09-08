@@ -62,7 +62,7 @@ jobs:
       - name: build
         run: |
           sed -i "s#custom.css#custom1.css#g" docusaurus.config.js
-          sed -i "s#baseUrl: '/'#baseUrl: '/doc/'#g" docusaurus.config.js
+          sed -i "s#baseUrl: '/'#baseUrl: '/dongtai_doc/'#g" docusaurus.config.js
           yarn
           yarn build
 
