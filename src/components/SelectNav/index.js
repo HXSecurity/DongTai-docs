@@ -6,7 +6,7 @@ import versionsList from '@site/versions.json'
 export default function SelectNav({ label, items }) {
   let history = useHistory();
   let pathname = useLocation().pathname;
-  let dongtai = pathname.startsWith('/doc/')
+  let dongtai = pathname.startsWith('/dongtai_doc/')
   let cur = pathname.replace(dongtai ? '/dongtai_doc/docs/' : '/docs/', '').split('/')[0]
   let flag = cur === 'next' || versionsList.includes(cur)
   let pagePath = flag ? pathname.replace(dongtai ? `/dongtai_doc/docs/${cur}` : `/docs/${cur}`, '') : pathname.replace(dongtai ? '/dongtai_doc/docs' : '/docs', '')
