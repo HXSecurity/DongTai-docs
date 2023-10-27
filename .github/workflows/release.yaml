@@ -75,7 +75,7 @@ jobs:
           tags: |
             dongtai/dongtai-doc-v5:latest
             dongtai/dongtai-doc-v5:0.0.${{github.run_number}}
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-doc:latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-doc:max-develop-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-doc:max-beta-latest
-            registry.cn-hongkong.aliyuncs.com/secnium/dongtai-doc:max-main-latest
+            wukong.tencentcloudcr.com/dongtai/dongtai-doc:latest
+            wukong.tencentcloudcr.com/dongtai/dongtai-doc:max-develop-latest
+            wukong.tencentcloudcr.com/dongtai/dongtai-doc:max-beta-latest
+            wukong.tencentcloudcr.com/dongtai/dongtai-doc:max-main-latest
