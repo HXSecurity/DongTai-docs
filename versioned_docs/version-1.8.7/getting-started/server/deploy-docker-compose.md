@@ -99,7 +99,7 @@ csrf_trust_origins = .example.com
 
 1. 下载 SCA 数据库文件：
 
-	https://github.com/st1020/DongTai-docs/tree/main/static/sca/
+	https://github.com/HXSecurity/DongTai-docs/tree/main/static/sca/
 
 2. 执行导入命令：
 
