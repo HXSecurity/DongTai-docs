@@ -99,9 +99,7 @@ csrf_trust_origins = .example.com
 
 1. 下载 SCA 数据库文件：
 
-	```bash
-	wget https://huoqi-public.oss-cn-beijing.aliyuncs.com/iast/sql/sca20220114.sql
-	```
+	https://github.com/HXSecurity/DongTai-docs/tree/main/static/sca/
 
 2. 执行导入命令：
 
