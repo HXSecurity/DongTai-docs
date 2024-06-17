@@ -12,8 +12,9 @@ import Highlight from '@site/src/components/Highlight';
 
 * [GitHub Discussion](https://github.com/HXSecurity/DongTai/discussions/) 
 
-* 添加小助理 - 小依企微
+* 尊敬的客户， 您好！扫下面的二维码，可以加入官方客户群获取产品相关技术支持！
+也可以拨打400-688-9582联系我们
 
-  <img src="/img/docs/get-help/qrcode/assistant-xiaoyi.png" width="18%"/>
+  <img src="/img/docs/getting-started/server/addGroup.png" width="18%"/>
 
 :::
