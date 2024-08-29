@@ -66,7 +66,6 @@ const features2 = [
       {label:"📙 部署洞态 Server 相关问题",url:"docs/get-help/faq-server"},
       {label:"📙 安装洞态 Agent 相关问题",url:"docs/get-help/faq-agent/faq-agent-install"},
       {label:"📙 洞态漏洞检测相关问题",url:"docs/get-help/faq-detect"},
-      {label:"📙 联系我们",url:"docs/get-help/contact-us"},
     ],
     description: '',
   },
